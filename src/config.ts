@@ -1,0 +1,1 @@
+export const ORIGIN = 'https://strn-blog.vercel.app';
