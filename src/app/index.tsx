@@ -1,47 +1,41 @@
 import React, { useState, useEffect } from "react";
-import { FlatList, StyleSheet, View, Text, Image, Dimensions } from "react-native";
+import { FlatList, StyleSheet, View, Text, Image, useWindowDimensions } from "react-native";
 import { getAllPosts } from "../repository/postRepository";
 import { Link } from "expo-router";
 import { Post } from "../types/post"; // Adjust the path as per your project structure
 
 const Page = () => {
+  const windowWidth = useWindowDimensions().width;
   const [posts, setPosts] = useState<Post[]>([]);
-  const [windowWidth, setWindowWidth] = useState(Dimensions.get("window").width);
 
   useEffect(() => {
     const fetchedPosts = getAllPosts();
     setPosts(fetchedPosts.reverse()); // Reverse the order of the posts
-
-    const handleResize = () => {
-      setWindowWidth(Dimensions.get("window").width);
-    };
-
-    Dimensions.addEventListener("change", handleResize);
-
-    return () => {
-      Dimensions.removeEventListener("change", handleResize);
-    };
   }, []);
 
-  const itemWidth = windowWidth / 8 - 20; // Subtract some space for margins
+  const numColumns = windowWidth < 1081 ? 2 : 4;
+  const itemWidth = windowWidth / numColumns - 20; // Subtract some space for margins
+  const itemHeight = itemWidth * 1.2; // Adjusted height based on window width
+  const titleFontSize = windowWidth < 1081 ? 14 : 18; // Adjusted font size for title
+  const dateFontSize = windowWidth < 1081 ? 10 : 12; // Adjusted font size for date
 
   const renderItem = ({ item }: { item: Post }) => (
-    <View style={[styles.postContainer, { width: itemWidth }]}>
+    <View style={[styles.postContainer, { width: itemWidth, height: itemHeight }]}>
       <Link href={`/${item.slug}`} style={styles.postLink}>
         <View style={styles.imageContainer}>
           <Image
             source={{ uri: item.thumbnail }}
-            style={[styles.postThumbnail, { width: itemWidth - 4 }]} // Adjusted to fit within border
+            style={[styles.postThumbnail, { width: itemWidth - 4, height: itemHeight - 44 }]} // Adjusted to fit within border
             resizeMode="cover"
           />
           <View style={styles.titleContainer}>
-            <Text style={styles.postTitle}>{item.title}</Text>
+            <Text style={[styles.postTitle, { fontSize: titleFontSize }]}>{item.title}</Text>
           </View>
         </View>
-        <View style={styles.dateContainer}>
-          <Text style={styles.postDate}>{formatDate(item.date)}</Text>
-        </View>
       </Link>
+      <View style={styles.dateContainer}>
+        <Text style={[styles.postDate, { fontSize: dateFontSize }]}>{formatDate(item.date)}</Text>
+      </View>
     </View>
   );
 
@@ -57,8 +51,8 @@ const Page = () => {
         contentContainerStyle={styles.postList}
         renderItem={renderItem}
         keyExtractor={(item) => item.slug}
-        numColumns={8}
-        key={8} // Force re-render when numColumns changes
+        numColumns={numColumns}
+        key={numColumns} // Force re-render when numColumns changes
       />
     </View>
   );
@@ -83,7 +77,7 @@ const styles = StyleSheet.create({
     textDecorationLine: "none",
   },
   postContainer: {
-    backgroundColor: "lightgray",
+    backgroundColor: "#07083a",
     borderRadius: 10,
     overflow: "hidden",
     margin: 5,
@@ -94,7 +88,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     position: "relative",
     width: "100%",
-    height: 200,
+    height: "85%", // Adjusted to leave space for title and date
   },
   postThumbnail: {
     height: "100%",
@@ -123,14 +117,13 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    height: 20,
+    height: 30, // Adjusted height for date container
     justifyContent: "center",
     alignItems: "center",
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
   },
   postDate: {
-    fontSize: 12,
     color: "#fff",
   },
 });
