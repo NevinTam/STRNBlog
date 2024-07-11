@@ -4,7 +4,7 @@ const post: Post = {
     slug: 'post1',
     date: '2024-02-28T13:27:28Z',
     title: 'My first post',
-    description: 'This is My first post',
+    description: 'This is My first post h h h h h h h',
     thumbnail: 'post1.png',
     content: `
     # Ite in esse gratos clipeum creditur posse

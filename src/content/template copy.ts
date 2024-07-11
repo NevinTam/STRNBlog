@@ -10,5 +10,5 @@ const post: Post = {
     
     `,
 };
-
+//how to add post: https://www.youtube.com/watch?v=ewW6_baBXko
 export default post;
