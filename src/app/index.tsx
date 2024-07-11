@@ -25,7 +25,7 @@ const Page = () => {
         <View style={styles.imageContainer}>
           <Image
             source={{ uri: item.thumbnail }}
-            style={[styles.postThumbnail, { width: itemWidth - 4, height: itemHeight - 44 }]} // Adjusted to fit within border
+            style={[styles.postThumbnail, { width: itemWidth - 4, height: itemHeight + 10 }]} // Adjusted to fit within border
             resizeMode="cover"
           />
           <View style={styles.titleContainer}>
