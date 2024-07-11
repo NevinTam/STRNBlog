@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
-    backgroundColor: "rgba(191,163,68,255)", // Semi-transparent gold
+    backgroundColor: "rgba(191,163,68, 0.8)", // Semi-transparent gold
     paddingVertical: 5,
     justifyContent: "center",
     alignItems: "center",

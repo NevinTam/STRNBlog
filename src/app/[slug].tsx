@@ -45,7 +45,7 @@ const PostDetailsPage = () => {
                 </View>
 
                 <Image
-                    source={{ uri: `${ORIGIN}/thumbnails/${post.thumbnail}` }}
+                    source={{ uri: post.thumbnail }}
                     style={{ width: '100%', aspectRatio: 16 / 9 }}
                     alt={post.title}
                 />
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     postContainer: {
         borderLeftWidth: 10,
         borderRightWidth: 10,
-        borderColor: 'lightblue',
+        borderColor: 'gold',
         paddingHorizontal: 10,
         paddingVertical: 20,
     },
