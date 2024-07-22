@@ -15,7 +15,10 @@ const Page = () => {
 
   const numColumns = windowWidth < 1081 ? 2 : 4;
   const itemWidth = windowWidth / numColumns - 20; // Subtract some space for margins
-  const itemHeight = itemWidth * 1.2; // Adjusted height based on window width
+
+  // Adjust itemHeight based on screen width
+  const itemHeight = windowWidth < 1081 ? itemWidth * 2 : itemWidth * 1.2; // Increase height for smaller screens
+
   const titleFontSize = windowWidth < 1081 ? 14 : 18; // Adjusted font size for title
   const dateFontSize = windowWidth < 1081 ? 10 : 12; // Adjusted font size for date
   const imageHeightAdjustment = windowWidth < 1081 ? 18 : 0; // Adjust height based on window width
@@ -69,6 +72,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "flex-start",
+    marginTop: 40, // Adds 20 pixels of space between the top of the page and the first row of posts
   },
   postLink: {
     width: "100%",
