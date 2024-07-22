@@ -18,6 +18,7 @@ const Page = () => {
   const itemHeight = itemWidth * 1.2; // Adjusted height based on window width
   const titleFontSize = windowWidth < 1081 ? 14 : 18; // Adjusted font size for title
   const dateFontSize = windowWidth < 1081 ? 10 : 12; // Adjusted font size for date
+  const imageHeightAdjustment = windowWidth < 1081 ? 18 : 0; // Adjust height based on window width
 
   const renderItem = ({ item }: { item: Post }) => (
     <View style={[styles.postContainer, { width: itemWidth, height: itemHeight }]}>
@@ -25,7 +26,7 @@ const Page = () => {
         <View style={styles.imageContainer}>
           <Image
             source={{ uri: item.thumbnail }}
-            style={[styles.postThumbnail, { width: itemWidth - 4, height: itemHeight + 10 }]} // Adjusted to fit within border
+            style={[styles.postThumbnail, { width: itemWidth - 4, height: itemHeight - 44 + imageHeightAdjustment }]} // Adjusted to fit within border
             resizeMode="cover"
           />
           <View style={styles.titleContainer}>
@@ -61,7 +62,7 @@ const Page = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#07083a",
     padding: 10,
   },
   postList: {
@@ -82,7 +83,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     margin: 5,
     borderWidth: 2,
-    borderColor: "#0d47a1",
+    borderColor: "rgba(191,163,68, 0.8)",
     position: "relative",
   },
   imageContainer: {
@@ -124,7 +125,7 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 10,
   },
   postDate: {
-    color: "#fff",
+    color: "#ffff",
   },
 });
 
