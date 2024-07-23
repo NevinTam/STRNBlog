@@ -5,7 +5,7 @@ const posts: Record<string, Post> = {
     post2: require('./post2').default,
     post3: require('./post3').default,
     post4: require('./post4').default,
-    post5: require('./post3').default,
+    post5: require('./post5').default,
     post6: require('./post3').default,
     post7: require('./post3').default,
     post8: require('./post3').default,

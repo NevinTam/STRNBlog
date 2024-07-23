@@ -26,6 +26,7 @@ export default function Root({ children }: PropsWithChildren) {
       <Head>
         <title>Seahawks Today</title>
         <meta name="description" content="An unfiltered Seahawks blog with insightful analysis." />
+        <meta property="og:image" content="https://pbs.twimg.com/profile_images/1577822032490041344/9sm_ZYGp_400x400.jpg" />
       </Head>
       <body>{children}</body>
     </html>
