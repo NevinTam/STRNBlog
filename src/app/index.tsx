@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    height: 30, // Adjusted height for date container
+    height: 40, // Adjusted height for date container
     justifyContent: "center",
     alignItems: "center",
     borderBottomLeftRadius: 10,
