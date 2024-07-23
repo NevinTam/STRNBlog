@@ -26,8 +26,7 @@ const PostDetailsPage = () => {
             <Head>
                 <title>{post.title}</title>
                 <meta name="description" content={post.description} />
-                <meta property="og:image" content="https://substackcdn.com/image/fetch/w_176,h_176,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F60c80449-366b-47dc-a711-17219ba57e61_463x427.png" />
-                <meta name="twitter:image" content="https://substackcdn.com/image/fetch/w_176,h_176,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F60c80449-366b-47dc-a711-17219ba57e61_463x427.png"/>
+                <meta property="og:image" content={post.thumbnail} />
             </Head>
             <ScrollView
                 style={{
