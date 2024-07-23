@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 10,
   },
   postTitle: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: "bold",
     textAlign: "center",
   },
