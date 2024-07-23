@@ -1,7 +1,7 @@
 import { Post } from '../types/post';
 
 const post: Post = {
-    slug: 'offseasonDefensiveDraftTargetsTwentyTwo', //file name
+    slug: 'offseasonDefensiveDraftTargets2022', //file name
     date: '2022-04-25T13:27:28Z',
     title: 'Seahawks 2022 Offseason Defensive Draft Targets',
     description: 'On the defensive side of the ball, the Seahawks made numerous “quiet” free agency moves, signing many players to smaller contracts. However, after free agency, the Seahawks still have some big needs on the defensive side of the ball that they will look to address in the 2022 NFL Draft.',

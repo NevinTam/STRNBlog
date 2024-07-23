@@ -1,7 +1,7 @@
 import { Post } from '../types/post';
 
 const post: Post = {
-    slug: 'offseasonTwentyTwoOffenseDraftTargets', //file name
+    slug: 'offseasonOffenseDraftTargets2022', //file name
     date: '2022-04-18T13:27:28Z',
     title: 'Seahawks 2022 Offseason Offensive Draft Targets',
     description: 'After a quiet free agency Seattle is forced to look towards the 2022 NFL Draft to cover any positions they feel were not adequately addressed. In Part 1 of the Positional Draft Targets, we will cover every offensive position from ones that need to be looked at immediately to ones the Seahawks can manage without drafting. Part 2 will be similar, but for defense instead.',
