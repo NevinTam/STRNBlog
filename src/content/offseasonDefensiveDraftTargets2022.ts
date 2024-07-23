@@ -8,7 +8,7 @@ const post: Post = {
     thumbnail: 'https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F6b7e872b-3509-448c-a7da-474791866215_700x473.jpeg',
     content: `
 
-        SeahawksToday Lead Writers: Shrihun Sankepally and Nevin Tamilselvan
+    SeahawksToday Lead Writers: Shrihun Sankepally and Nevin Tamilselvan
 
 ## **Tier 4 Need**
 

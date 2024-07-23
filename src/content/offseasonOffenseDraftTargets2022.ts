@@ -8,7 +8,7 @@ const post: Post = {
     thumbnail: 'https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F66b278a6-45e2-4968-9cbf-a9657ed76cdc_1050x787.jpeg',
     content: `
 
-        SeahawksToday Lead Writers: Shrihun Sankepally and Nevin Tamilselvan
+    SeahawksToday Lead Writers: Shrihun Sankepally and Nevin Tamilselvan
 
 ### QB: With QB the Seahawks are not in a very good spot. They have turnover machine Drew Lock, 25 yards passer Jacob Eason, and a 3-game starter Geno Smith under their belt. They could look towards Free Agency and sign someone or give Colin Kaepernick a chance, but their best bet is drafting one for the future. There are intriguing names in the draft for the Seahawks, such as Liberty QB Malik Willis or Cincinnati QB Desmond Ridder, among others.
 
