@@ -46,7 +46,7 @@ const PostDetailsPage = () => {
 
                 <Image
                     source={{ uri: post.thumbnail }}
-                    style={{ width: '100%', height: '30%', aspectRatio: 16 / 9 }}
+                    style={{ width: '100%', aspectRatio: 16 / 9 }}
                     alt={post.title}
                 />
                 <View style={styles.postContainer}>
