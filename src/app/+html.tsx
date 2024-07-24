@@ -21,8 +21,18 @@ export default function Root({ children }: PropsWithChildren) {
         */}
         <ScrollViewStyleReset />
 
+        {/* Google Tag Manager */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L0KCEMVECM"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-L0KCEMVECM');
+          `}
+        </script>
+
         {/* Add any additional <head> elements that you want globally available on web... */}
-        <link rel="icon" href="https://pbs.twimg.com/profile_images/1577822032490041344/9sm_ZYGp_400x400.jpg" type="image/jpeg" />
       </head>
       <Head>
         <title>Seahawks Today</title>
