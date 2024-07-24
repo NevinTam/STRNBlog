@@ -95,10 +95,10 @@ export default function RootLayout() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.headerContainer}>
+      <View style={[styles.headerContainer, { paddingVertical: isSmallScreen ? 10 : 30 }]}>
         <CustomHeader />
       </View>
-      <View style={[styles.contentContainer, { paddingTop: isSmallScreen ? 65 : 85 }]}>
+      <View style={[styles.contentContainer, { paddingTop: isSmallScreen ? 40 : 85 }]}>
         <Stack>
           <Stack.Screen 
             name="index" 
