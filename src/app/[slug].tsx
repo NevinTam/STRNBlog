@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Image, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, Image, StyleSheet, useWindowDimensions } from 'react-native';
 import React, { useState } from 'react';
 import { Stack, useLocalSearchParams } from 'expo-router';
 import { getPost, getAllPosts } from '../repository/postRepository';
@@ -16,6 +16,8 @@ export async function generateStaticParams(): Promise<Record<string, string>[]> 
 const PostDetailsPage = () => {
     const { slug } = useLocalSearchParams();
     const [post, setPost] = useState(getPost(slug));
+    const { width: windowWidth } = useWindowDimensions();
+    const isSmallScreen = windowWidth < 1081;
 
     if (!post) {
         return <Text>Post not Found!</Text>;
@@ -39,6 +41,7 @@ const PostDetailsPage = () => {
                     width: '100%',
                     marginHorizontal: 'auto',
                     padding: 20,
+                    paddingBottom: isSmallScreen ? 50 : 0, 
                 }}
             >
                 <View style={styles.titleContainer}>
