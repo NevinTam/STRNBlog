@@ -28,6 +28,7 @@ const PostDetailsPage = () => {
                 <meta name="description" content={post.description} />
                 <meta property="og:image" content="https://pbs.twimg.com/profile_images/1577822032490041344/9sm_ZYGp_400x400.jpg" />
             </Head>
+            
             <ScrollView
                 style={{
                     flex: 1,

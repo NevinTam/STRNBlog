@@ -1,10 +1,12 @@
 import { ScrollViewStyleReset } from 'expo-router/html';
-import { type PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
+import Head from 'expo-router/head';
+import React from 'react';
 
-/**
- * This file is web-only and used to configure the root HTML for every web page during static rendering.
- * The contents of this function only run in Node.js environments and do not have access to the DOM or browser APIs.
- */
+// This file is web-only and used to configure the root HTML for every
+// web page during static rendering.
+// The contents of this function only run in Node.js environments and
+// do not have access to the DOM or browser APIs.
 export default function Root({ children }: PropsWithChildren) {
   return (
     <html lang="en">
@@ -19,21 +21,27 @@ export default function Root({ children }: PropsWithChildren) {
         */}
         <ScrollViewStyleReset />
 
-        {/* Using raw CSS styles as an escape-hatch to ensure the background color never flickers in dark-mode. */}
-        <style dangerouslySetInnerHTML={{ __html: responsiveBackground }} />
         {/* Add any additional <head> elements that you want globally available on web... */}
+        <link rel="icon" href="https://pbs.twimg.com/profile_images/1577822032490041344/9sm_ZYGp_400x400.jpg" type="image/jpeg" />
+        
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L0KCEMVECM"></script>
+        <script dangerouslySetInnerHTML={{__html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-L0KCEMVECM');
+        `}} />
       </head>
-      <body>{children}</body>
+      <Head>
+        <title>Seahawks Today</title>
+        <meta name="description" content="An unfiltered Seahawks blog with insightful analysis." />
+        <meta property="og:image" content="https://pbs.twimg.com/profile_images/1577822032490041344/9sm_ZYGp_400x400.jpg" />
+      </Head>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }
-
-const responsiveBackground = `
-body {
-  background-color: #fff;
-}
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #000;
-  }
-}`;
