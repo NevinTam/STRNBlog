@@ -24,7 +24,7 @@ function CustomPostDetailsHeader() {
   const { width: windowWidth } = useWindowDimensions();
   if (windowWidth < 1081) return null; // Hide if screen width is less than 1081px
 
-  const headerFontSize = 24; // Font size for Post Details
+  const headerFontSize = 24.1; // Font size for Post Details
   const imageSize = 0; // Image size
 
   return (
