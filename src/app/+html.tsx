@@ -22,7 +22,7 @@ export default function Root({ children }: PropsWithChildren) {
         <title>Seahawks Today</title>
         <meta name="description" content="An unfiltered Seahawks blog with insightful analysis." />
         <meta property="og:image" content="https://pbs.twimg.com/profile_images/1577822032490041344/9sm_ZYGp_400x400.jpg" />
-        <!-- Google tag (gtag.js) -->
+        {/* <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L0KCEMVECM"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -30,7 +30,7 @@ export default function Root({ children }: PropsWithChildren) {
   gtag('js', new Date());
 
   gtag('config', 'G-L0KCEMVECM');
-</script>
+</script> */}
       </head>
       <body>{children}</body>
     </html>
