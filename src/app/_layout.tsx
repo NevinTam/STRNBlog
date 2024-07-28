@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Stack } from 'expo-router';
 import { View, Text, Image, StyleSheet, useWindowDimensions } from 'react-native';
+import { initializeGA, logPageView } from '../analytics/ga4';
 
 // Custom header for the main screen
 function CustomHeader() {
@@ -24,14 +25,14 @@ function CustomPostDetailsHeader() {
   const { width: windowWidth } = useWindowDimensions();
   if (windowWidth < 1081) return null; // Hide if screen width is less than 1081px
 
-  const headerFontSize = 24.1; // Font size for Post Details
+  const headerFontSize = 24; // Font size for Post Details
   const imageSize = 0; // Image size
 
   return (
     <View style={styles.detailsHeaderContent}>
       <Image
         source={{ uri: 'https://substackcdn.com/image/fetch/w_176,h_176,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F60c80449-366b-47dc-a711-17219ba57e61_463x427.png' }}
-        style={[styles.detailsHeaderImage, { width: imageSize, height: imageSize}]} // Image size
+        style={[styles.detailsHeaderImage, { width: imageSize, height: imageSize }]} // Image size
       />
       <Text style={[styles.detailsHeaderTitle, { fontSize: headerFontSize }]}></Text>
     </View>
@@ -92,6 +93,11 @@ const styles = StyleSheet.create({
 export default function RootLayout() {
   const { width: windowWidth } = useWindowDimensions();
   const isSmallScreen = windowWidth < 1081;
+
+  useEffect(() => {
+    initializeGA();
+    logPageView();
+  }, []);
 
   return (
     <View style={styles.container}>

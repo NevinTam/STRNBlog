@@ -1,15 +1,13 @@
 import { View, Text, ScrollView, Image, StyleSheet, useWindowDimensions } from 'react-native';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Stack, useLocalSearchParams } from 'expo-router';
 import { getPost, getAllPosts } from '../repository/postRepository';
 import Markdown from 'react-native-markdown-display';
 import Head from 'expo-router/head';
-import { ORIGIN } from '../config';
+import { logPageView } from '../analytics/ga4'; // Import GA4 function
 
 export async function generateStaticParams(): Promise<Record<string, string>[]> {
     const posts = getAllPosts();
-    // Return an array of params to generate static HTML files for.
-    // Each entry in the array will be a new page.
     return posts.map(post => ({ slug: post.slug }));
 }
 
@@ -18,6 +16,10 @@ const PostDetailsPage = () => {
     const [post, setPost] = useState(getPost(slug));
     const { width: windowWidth } = useWindowDimensions();
     const isSmallScreen = windowWidth < 1081;
+
+    useEffect(() => {
+        logPageView();
+    }, [slug]);
 
     if (!post) {
         return <Text>Post not Found!</Text>;
