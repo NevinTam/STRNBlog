@@ -24,7 +24,7 @@ export default function Root({ children }: PropsWithChildren) {
         {/* Add any additional <head> elements that you want globally available on web... */}
         <link rel="icon" href="https://pbs.twimg.com/profile_images/1577822032490041344/9sm_ZYGp_400x400.jpg" type="image/jpeg" />
         
-        {/* Google tag (gtag.js) */}
+        {/* Google tag (gtag.js)
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-L0KCEMVECM"></script>
         <script dangerouslySetInnerHTML={{__html: `
           window.dataLayer = window.dataLayer || [];
@@ -32,7 +32,7 @@ export default function Root({ children }: PropsWithChildren) {
           gtag('js', new Date());
 
           gtag('config', 'G-L0KCEMVECM');
-        `}} />
+        `}} /> */}
       </head>
       <Head>
         <title>Seahawks Today</title>
