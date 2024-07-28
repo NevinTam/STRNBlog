@@ -15,15 +15,23 @@ export default function Root({ children }: PropsWithChildren) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        {/* Disable body scrolling on web. This makes ScrollView components work closer to how they do on native. However, body scrolling is often nice to have for mobile web. If you want to enable it, remove this line. */}
+        {/*
+          Disable body scrolling on web. This makes ScrollView components work closer to how they do on native.
+          However, body scrolling is often nice to have for mobile web. If you want to enable it, remove this line.
+        */}
         <ScrollViewStyleReset />
 
         {/* Add any additional <head> elements that you want globally available on web... */}
-        <title>Seahawks Today News</title>
+        <link rel="icon" href="https://pbs.twimg.com/profile_images/1577822032490041344/9sm_ZYGp_400x400.jpg" type="image/jpeg" />
+        <title>Seahawks Today</title>
+      </head>
+      <Head>
         <meta name="description" content="An unfiltered Seahawks blog with insightful analysis." />
         <meta property="og:image" content="https://pbs.twimg.com/profile_images/1577822032490041344/9sm_ZYGp_400x400.jpg" />
-      </head>
-      <body>{children}</body>
+      </Head>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }
