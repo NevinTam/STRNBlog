@@ -27,7 +27,7 @@
       "favicon": "./assets/images/favicon.png",
       "name": "Seahawks Today News"
     },
-    "plugins": [["expo-router", {"origin": "Seahawks Today News"}]],
+    "plugins": [["expo-router", {"origin": "https://seahawks-today.com/"}]],
     
     "experiments": {
       "typedRoutes": true
