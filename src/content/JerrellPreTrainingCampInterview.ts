@@ -13,7 +13,9 @@ const post: Post = {
 # **“Come in with the idea that ’I am gonna be better today’, and that’ll lead you all the way to the finish line”**
 ‎ 
 
-**Michael Jerrell, star Findlay OT**, was recently drafted by the Seattle Seahawks in the 6th round of the 2024 NFL Draft. Michael has showcased elite athleticism at his position, something that led him to being the only D2 player taken in the entire draft. Following his selection in the draft, Michael has undergone a big transition period through the Seahawk’s rookie offseason program, starting with his experience through rookie OTA’s and minicamp.
+## **Michael Jerrell, star Findlay OT**...
+
+was recently drafted by the Seattle Seahawks in the 6th round of the 2024 NFL Draft. Michael has showcased elite athleticism at his position, something that led him to being the only D2 player taken in the entire draft. Following his selection in the draft, Michael has undergone a big transition period through the Seahawk’s rookie offseason program, starting with his experience through rookie OTA’s and minicamp.
 
     “when you first get there, you kinda feel like you never played football, because they throwin’ so much at you - plays, terminology, and technique … it can get overwhelming. You gotta take a breath and realize that it’s all the same. The moment I did that, the moment it started to get easier”
 
