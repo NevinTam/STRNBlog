@@ -1,7 +1,6 @@
 import React from 'react';
 import { Stack } from 'expo-router';
 import { View, Text, Image, StyleSheet, useWindowDimensions } from 'react-native';
-import { ScrollViewStyleReset } from 'expo-router/html';
 
 // Custom header for the main screen
 function CustomHeader() {
@@ -25,14 +24,14 @@ function CustomPostDetailsHeader() {
   const { width: windowWidth } = useWindowDimensions();
   if (windowWidth < 1081) return null; // Hide if screen width is less than 1081px
 
-  const headerFontSize = 24; // Font size for Post Details
+  const headerFontSize = 24.1; // Font size for Post Details
   const imageSize = 0; // Image size
 
   return (
     <View style={styles.detailsHeaderContent}>
       <Image
         source={{ uri: 'https://substackcdn.com/image/fetch/w_176,h_176,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F60c80449-366b-47dc-a711-17219ba57e61_463x427.png' }}
-        style={[styles.detailsHeaderImage, { width: imageSize, height: imageSize }]} // Image size
+        style={[styles.detailsHeaderImage, { width: imageSize, height: imageSize}]} // Image size
       />
       <Text style={[styles.detailsHeaderTitle, { fontSize: headerFontSize }]}></Text>
     </View>
@@ -95,54 +94,28 @@ export default function RootLayout() {
   const isSmallScreen = windowWidth < 1081;
 
   return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <ScrollViewStyleReset />
-        <link rel="icon" href="https://pbs.twimg.com/profile_images/1577822032490041344/9sm_ZYGp_400x400.jpg" type="image/jpeg" />
-        <title>Seahawks Today</title>
-        <meta name="description" content="An unfiltered Seahawks blog with insightful analysis." />
-        <meta property="og:image" content="https://pbs.twimg.com/profile_images/1577822032490041344/9sm_ZYGp_400x400.jpg" />
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L0KCEMVECM"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-L0KCEMVECM');
-            `,
-          }}
-        />
-      </head>
-      <body>
-        <View style={styles.container}>
-          <View style={[styles.headerContainer, { paddingVertical: isSmallScreen ? 10 : 30 }]}>
-            <CustomHeader />
-          </View>
-          <View style={[styles.contentContainer, { paddingTop: isSmallScreen ? 40 : 85 }]}>
-            <Stack>
-              <Stack.Screen 
-                name="index" 
-                options={{ 
-                  headerShown: false // Hide default header
-                }} 
-              />
-              <Stack.Screen 
-                name="[slug]" 
-                options={{ 
-                  headerTitle: () => <CustomPostDetailsHeader />,
-                  headerStyle: { backgroundColor: '#07083a' }, // Set the header background color
-                  headerTitleStyle: { color: 'white' }, // White text color for header title
-                }} 
-              />
-            </Stack>
-          </View>
-        </View>
-      </body>
-    </html>
+    <View style={styles.container}>
+      <View style={[styles.headerContainer, { paddingVertical: isSmallScreen ? 10 : 30 }]}>
+        <CustomHeader />
+      </View>
+      <View style={[styles.contentContainer, { paddingTop: isSmallScreen ? 40 : 85 }]}>
+        <Stack>
+          <Stack.Screen 
+            name="index" 
+            options={{ 
+              headerShown: false // Hide default header
+            }} 
+          />
+          <Stack.Screen 
+            name="[slug]" 
+            options={{ 
+              headerTitle: () => <CustomPostDetailsHeader />,
+              headerStyle: { backgroundColor: '#07083a' }, // Set the header background color
+              headerTitleStyle: { color: 'white' }, // White text color for header title
+            }} 
+          />
+        </Stack>
+      </View>
+    </View>
   );
 }
