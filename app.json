@@ -24,9 +24,10 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.png",
+      "name": "Seahawks Today News"
     },
-    "plugins": [["expo-router", {"origin": "https://seahawks-today.com"}]],
+    "plugins": [["expo-router", {"origin": "https://www.seahawks-today.com"}]],
     
     "experiments": {
       "typedRoutes": true
