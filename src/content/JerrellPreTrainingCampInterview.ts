@@ -41,7 +41,7 @@ Yoseph only played a year with Michael at Findlay, but Michael notes that he thi
 
 
 
-One of Michael’s favorite coaches that he credits for his success at Findlay is Coach Chad Wagner (known as Coach Wags), who is the Strength and conditioning coach at Findlay. He;’s been an integral part of many player’s stories - including Michael’s.
+One of Michael’s favorite coaches that he credits for his success at Findlay is Coach Chad Wagner (known as Coach Wags), who is the Strength and conditioning coach at Findlay. He’s been an integral part of many player’s stories - including Michael’s.
 
     “Coach Wags is a worker. He wants workers. From Coach Kory Allen and Coach Wags, their personalities, I get the same personalities from the coaches here, in Seattle. They both want workers…whatever the coach says is on the table, they do it, and they do it above and beyond. They want guys who run through a brick wall.”
 
