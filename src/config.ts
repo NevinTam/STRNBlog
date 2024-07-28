@@ -1,1 +1,1 @@
-export const ORIGIN = 'https://www.seahawks-today.com';
+export const ORIGIN = 'https://seahawks-today.com';
