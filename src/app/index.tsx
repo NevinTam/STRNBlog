@@ -19,7 +19,7 @@ const Page = () => {
   // Adjust itemHeight based on screen width
   const itemHeight = windowWidth < 1081 ? itemWidth * 2 : itemWidth * 1.2; // Increase height for smaller screens
 
-  const titleFontSize = windowWidth < 1081 ? 14 : 24; // Adjusted font size for title
+  const titleFontSize = windowWidth < 1081 ? 14 : 18; // Adjusted font size for title
   const dateFontSize = windowWidth < 1081 ? 14 : 16; // Adjusted font size for date
   const imageHeightAdjustment = windowWidth < 1081 ? 18 : 0; // Adjust height based on window width
 
