@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'rosterOffensivePredictions', //file name
-    date: '2024-02-28T13:27:28Z',
+    date: '2024-08-04T13:27:28Z',
     title: 'Seahawks 2024 Offensive Roster Predictions',
     description: 'Seahawks 2024 Offensive Roster Predictions (53 man roster)',
     thumbnail: 'https://static.foxnews.com/foxnews.com/content/uploads/2022/10/DK-Metcalf.jpg',
