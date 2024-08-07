@@ -40,7 +40,7 @@ Coming from the ***Russell Wilson*** trade, ***Noah Fant*** has yet to live up t
 ## **OT: 2**
 The Seahawks offensive line does not currently have clear-cut starters. Left tackle ***Charles Cross*** has been the team's best offensive linemen thus far in the offseason, and looks to be a breakout candidate. ***Laken Tomlinson*** was signed this offseason and has been extremely durable in his career, but there are questions if he will provide enough support for young Interior Offensive Line. Regardless, he is a lock to make the roster.
 
-Center ***Olu Oluwatimi*** was hoped to take over the starting center job this offseason, but the Seahawks are reportedly signing ***Connor Williams*** in the next 2-3 days, allowing Olu and ***Nick Harris*** to compete for the backup job. Olu has been the starter throughout most of the offseason, so Harris may not have a place on the roster.
+Center ***Olu Oluwatimi*** was hoped to take over the starting center job this offseason, but the Seahawks have now signed ***Connor Williams***, allowing Olu and ***Nick Harris*** to compete for the backup job. Olu has been the starter throughout most of the offseason, so Harris may not have a place on the roster. Connor Williams, if at his pre-injury condition, enters as the Seahawks best offensive linemen in a long time and the Seahawks best center in a very, very long time.
 
 Perhaps the most unclear spot, right guard has 2nd year player ***Anthony Bradford*** with the starting job right now, rookie ***Christian Haynes*** who has not been able to cement himself as the starter yet, and ***McClendon Curtis*** who has impressed the Seahawks and played at right guard earlier in the offseaosn, but with the uncertainty of ***Abraham Lucas***, switched to right tackle. 
 
