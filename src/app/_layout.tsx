@@ -1,45 +1,92 @@
-import React, { useEffect } from 'react';
-import { router, Stack, useRouter } from 'expo-router';
-import { View, Text, Image, StyleSheet, useWindowDimensions, TouchableOpacity } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { Stack, useRouter } from 'expo-router';
+import { View, Text, Image, StyleSheet, useWindowDimensions, TouchableOpacity, TextInput, FlatList, TouchableWithoutFeedback } from 'react-native';
 import { initializeGA, logPageView } from '../analytics/ga4';
+import { getAllPosts } from '../repository/postRepository'; // Ensure this function is available for fetching posts
 
-// Custom header for the main screen
 function CustomHeader() {
   const { width: windowWidth } = useWindowDimensions();
-  const router = useRouter(); // Use router for navigation
-  const headerFontSize = windowWidth < 1081 ? 24 : 32; // Adjusted font size
-  const imageSize = windowWidth < 1081 ? 60 : 80; // Adjusted image size
-  const isSmallScreen = windowWidth < 1081;
+  const router = useRouter();
+  const headerFontSize = windowWidth < 1081 ? 24 : 32;
+  const imageSize = windowWidth < 1081 ? 60 : 80;
 
   return (
     <View style={styles.headerContent}>
-      <TouchableOpacity onPress={() => router.push('/')} style={styles.headerImageWrapper}>
+      <TouchableOpacity onPress={() => router.push('/')}>
         <Image
           source={{ uri: 'https://substackcdn.com/image/fetch/w_176,h_176,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F60c80449-366b-47dc-a711-17219ba57e61_463x427.png' }}
-          style={[styles.headerImage, { width: imageSize, height: imageSize }]} // Image size
+          style={[styles.headerImage, { width: imageSize, height: imageSize }]}
         />
       </TouchableOpacity>
       <Text style={[styles.headerTitle, { fontSize: headerFontSize }]}>SeahawksToday</Text>
-      {!isSmallScreen && (
-        <>
-          <TouchableOpacity style={styles.button} onPress={() => router.push('/aboutPage')}>
-            <Text style={styles.buttonText}>About</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={() => router.push('/contactUs')}>
-            <Text style={styles.buttonText}>Contact</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={() => router.push('/twitter')}>
-            <Text style={styles.buttonText}>Twitter</Text>
-          </TouchableOpacity>
-        </>
+      <TouchableOpacity style={styles.button} onPress={() => router.push('/aboutPage')}>
+        <Text style={styles.buttonText}>About</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => router.push('/contactUs')}>
+        <Text style={styles.buttonText}>Contact</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => router.push('/twitter')}>
+        <Text style={styles.buttonText}>Twitter</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
+function CustomSearchBar() {
+  const { width: windowWidth } = useWindowDimensions(); // Define windowWidth here
+  const [searchText, setSearchText] = useState('');
+  const [filteredPosts, setFilteredPosts] = useState([]);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [allPosts, setAllPosts] = useState([]);
+  const router = useRouter();
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const posts = await getAllPosts();
+      setAllPosts(posts);
+    };
+    fetchPosts();
+  }, []);
+
+  useEffect(() => {
+    const results = allPosts.filter(post => post.title.toLowerCase().includes(searchText.toLowerCase()));
+    setFilteredPosts(results);
+    setShowDropdown(searchText.length > 0); // Show dropdown if there's search text
+  }, [searchText, allPosts]);
+
+  return (
+    <View style={styles.searchContainer}>
+      <TextInput
+        style={[styles.searchInput, { width: windowWidth < 1081 ? 50 : 200 }]} // Adjust width based on screen size
+        placeholder="Search..."
+        value={searchText}
+        onChangeText={text => setSearchText(text)}
+        onFocus={() => setShowDropdown(true)}
+        onBlur={() => setTimeout(() => setShowDropdown(false), 100)} // Delay hiding dropdown for user interaction
+      />
+      {showDropdown && filteredPosts.length > 0 && (
+        <View style={styles.dropdown}>
+          <FlatList
+            data={filteredPosts}
+            keyExtractor={item => item.slug}
+            renderItem={({ item }) => (
+              <TouchableWithoutFeedback onPress={() => {
+                router.push(`/${item.slug}`);
+                setSearchText('');
+                setShowDropdown(false);
+              }}>
+                <Text style={styles.dropdownItem}>{item.title}</Text>
+              </TouchableWithoutFeedback>
+            )}
+          />
+        </View>
       )}
     </View>
   );
 }
 
-// Custom header for the post details screen
 function CustomPostDetailsHeader() {
-  const { width: windowWidth } = useWindowDimensions();
+  const { width: windowWidth } = useWindowDimensions(); // Define windowWidth here
   if (windowWidth < 1081) return null; // Hide if screen width is less than 1081px
 
   const headerFontSize = 24; // Font size for Post Details
@@ -56,7 +103,6 @@ function CustomPostDetailsHeader() {
   );
 }
 
-// Styles for the components
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -71,15 +117,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#07083a', // Dark blue background for the header
     paddingVertical: 30, // Reduced padding to minimize height
     zIndex: 1, // Ensure the header is above other content
-    flexDirection: 'row', // Ensure buttons are in a row
+    flexDirection: 'row', // Ensure buttons and search bar are in a row
   },
   headerContent: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  headerImageWrapper: {
-    marginRight: 10, // Space between image and text
   },
   headerImage: {
     marginRight: 10, // Space between image and text
@@ -98,6 +141,32 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'white', // Button text color
     fontWeight: 'bold',
+  },
+  searchContainer: {
+    position: 'relative', // For absolute positioning of the dropdown
+    marginLeft: 10,
+  },
+  searchInput: {
+    backgroundColor: '#fff',
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 5,
+  },
+  dropdown: {
+    position: 'absolute',
+    top: '100%',
+    left: 0,
+    right: 0,
+    backgroundColor: '#fff',
+    borderColor: '#ddd',
+    borderWidth: 1,
+    borderRadius: 5,
+    zIndex: 2, // Ensure the dropdown is above other content
+  },
+  dropdownItem: {
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ddd',
   },
   detailsHeaderContent: {
     width: '100%',
@@ -119,16 +188,6 @@ const styles = StyleSheet.create({
     flex: 1,
     // The height will be adjusted dynamically based on the screen width
   },
-  fixedButtonsContainer: {
-    position: 'absolute',
-    bottom: 0,
-    width: '100%',
-    backgroundColor: '#07083a', // Dark blue background for the fixed button container
-    flexDirection: 'row',
-    justifyContent: 'center',
-    paddingVertical: 10, // Padding for vertical alignment
-    zIndex: 2, // Ensure buttons are above other content
-  },
 });
 
 // Root layout to include the custom headers
@@ -145,6 +204,7 @@ export default function RootLayout() {
     <View style={styles.container}>
       <View style={[styles.headerContainer, { paddingVertical: isSmallScreen ? 10 : 30 }]}>
         <CustomHeader />
+        <CustomSearchBar />
       </View>
       <View style={[styles.contentContainer, { paddingTop: isSmallScreen ? 40 : 85 }]}>
         <Stack>
@@ -159,24 +219,10 @@ export default function RootLayout() {
             options={{ 
               headerTitle: () => <CustomPostDetailsHeader />,
               headerStyle: { backgroundColor: '#07083a' }, // Set the header background color
-              headerTitleStyle: { color: 'white' }, // White text color for header title
             }} 
           />
         </Stack>
       </View>
-      {isSmallScreen && (
-        <View style={styles.fixedButtonsContainer}>
-          <TouchableOpacity style={styles.button} onPress={() => router.push('/aboutPage')}>
-            <Text style={styles.buttonText}>About</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={() => router.push('/contactUs')}>
-            <Text style={styles.buttonText}>Contact</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={() => router.push('/twitter')}>
-            <Text style={styles.buttonText}>Twitter</Text>
-          </TouchableOpacity>
-        </View>
-      )}
     </View>
   );
 }
