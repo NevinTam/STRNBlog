@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     position: 'absolute',
     top: 0,
-    width: '100%',
+    width: '101%',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#07083a', // Dark blue background for the header
