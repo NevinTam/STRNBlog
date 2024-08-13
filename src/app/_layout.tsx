@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Stack, useRouter } from 'expo-router';
+import { router, Stack, useRouter } from 'expo-router';
 import { View, Text, Image, StyleSheet, useWindowDimensions, TouchableOpacity, TextInput, FlatList, TouchableWithoutFeedback } from 'react-native';
 import { initializeGA, logPageView } from '../analytics/ga4';
 import { getAllPosts } from '../repository/postRepository'; // Ensure this function is available for fetching posts
@@ -19,21 +19,25 @@ function CustomHeader() {
         />
       </TouchableOpacity>
       <Text style={[styles.headerTitle, { fontSize: headerFontSize }]}>SeahawksToday</Text>
-      <TouchableOpacity style={styles.button} onPress={() => router.push('/aboutPage')}>
-        <Text style={styles.buttonText}>About</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => router.push('/contactUs')}>
-        <Text style={styles.buttonText}>Contact</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => router.push('/twitter')}>
-        <Text style={styles.buttonText}>Twitter</Text>
-      </TouchableOpacity>
+      {windowWidth >= 1081 && (
+        <>
+          <TouchableOpacity style={styles.button} onPress={() => router.push('/aboutPage')}>
+            <Text style={styles.buttonText}>About</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => router.push('/contactUs')}>
+            <Text style={styles.buttonText}>Contact</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => router.push('/twitter')}>
+            <Text style={styles.buttonText}>Twitter</Text>
+          </TouchableOpacity>
+        </>
+      )}
     </View>
   );
 }
 
 function CustomSearchBar() {
-  const { width: windowWidth } = useWindowDimensions(); // Define windowWidth here
+  const { width: windowWidth } = useWindowDimensions();
   const [searchText, setSearchText] = useState('');
   const [filteredPosts, setFilteredPosts] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -53,6 +57,8 @@ function CustomSearchBar() {
     setFilteredPosts(results);
     setShowDropdown(searchText.length > 0); // Show dropdown if there's search text
   }, [searchText, allPosts]);
+
+  if (windowWidth < 1081) return null; // Hide search bar for small screens
 
   return (
     <View style={styles.searchContainer}>
@@ -86,7 +92,7 @@ function CustomSearchBar() {
 }
 
 function CustomPostDetailsHeader() {
-  const { width: windowWidth } = useWindowDimensions(); // Define windowWidth here
+  const { width: windowWidth } = useWindowDimensions();
   if (windowWidth < 1081) return null; // Hide if screen width is less than 1081px
 
   const headerFontSize = 24; // Font size for Post Details
@@ -188,6 +194,16 @@ const styles = StyleSheet.create({
     flex: 1,
     // The height will be adjusted dynamically based on the screen width
   },
+  footerButtons: {
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    backgroundColor: '#07083a', // Dark blue background for the footer
+    paddingVertical: 10,
+    zIndex: 1,
+  },
 });
 
 // Root layout to include the custom headers
@@ -204,8 +220,21 @@ export default function RootLayout() {
     <View style={styles.container}>
       <View style={[styles.headerContainer, { paddingVertical: isSmallScreen ? 10 : 30 }]}>
         <CustomHeader />
-        <CustomSearchBar />
+        {!isSmallScreen && <CustomSearchBar />}
       </View>
+      {isSmallScreen && (
+        <View style={styles.footerButtons}>
+          <TouchableOpacity style={styles.button} onPress={() => router.push('/aboutPage')}>
+            <Text style={styles.buttonText}>About</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => router.push('/contactUs')}>
+            <Text style={styles.buttonText}>Contact</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => router.push('/twitter')}>
+            <Text style={styles.buttonText}>Twitter</Text>
+          </TouchableOpacity>
+        </View>
+      )}
       <View style={[styles.contentContainer, { paddingTop: isSmallScreen ? 40 : 85 }]}>
         <Stack>
           <Stack.Screen 
