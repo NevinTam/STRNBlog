@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     width: '100%',
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'center', // Center the buttons and reduce space between them
     backgroundColor: '#07083a', // Dark blue background for the footer
     paddingVertical: 10,
     zIndex: 1,
