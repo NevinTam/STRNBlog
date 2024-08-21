@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { router, Stack, useRouter } from 'expo-router';
-import { View, Text, Image, StyleSheet, useWindowDimensions, TouchableOpacity, TextInput, FlatList, TouchableWithoutFeedback } from 'react-native';
-import { initializeGA, logPageView } from '../analytics/ga4';
+import { View, Text, Image, StyleSheet, useWindowDimensions, TouchableOpacity, TextInput, FlatList, TouchableWithoutFeedback, Modal } from 'react-native';
 import { getAllPosts } from '../repository/postRepository'; // Ensure this function is available for fetching posts
+import { db } from '../../firebaseConfig'; // Import your Firebase config
+import { collection, addDoc } from 'firebase/firestore';
 
-function CustomHeader() {
+function CustomHeader({ onSubscribePress }) {
   const { width: windowWidth } = useWindowDimensions();
   const router = useRouter();
   const headerFontSize = windowWidth < 1081 ? 24 : 32;
@@ -19,7 +20,10 @@ function CustomHeader() {
         />
       </TouchableOpacity>
       <Text style={[styles.headerTitle, { fontSize: headerFontSize }]}>SeahawksToday</Text>
-      {windowWidth >= 1081 && (
+      {windowWidth < 1081 ? (
+        <TouchableOpacity style={styles.searchIcon} onPress={() => {/* Add functionality if needed */}}>
+        </TouchableOpacity>
+      ) : (
         <>
           <TouchableOpacity style={styles.button} onPress={() => router.push('/aboutPage')}>
             <Text style={styles.buttonText}>About</Text>
@@ -30,8 +34,30 @@ function CustomHeader() {
           <TouchableOpacity style={styles.button} onPress={() => router.push('/twitter')}>
             <Text style={styles.buttonText}>Twitter</Text>
           </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={onSubscribePress}>
+            <Text style={styles.buttonText}>Subscribe</Text>
+          </TouchableOpacity>
         </>
       )}
+    </View>
+  );
+}
+function Footer({ onSubscribePress }) {
+  const router = useRouter();
+  return (
+    <View style={styles.footerButtons}>
+      <TouchableOpacity style={styles.button} onPress={() => router.push('/aboutPage')}>
+        <Text style={styles.buttonText}>About</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => router.push('/contactUs')}>
+        <Text style={styles.buttonText}>Contact</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => router.push('/twitter')}>
+        <Text style={styles.buttonText}>Twitter</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={onSubscribePress}>
+        <Text style={styles.buttonText}>Subscribe</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -108,7 +134,6 @@ function CustomPostDetailsHeader() {
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -121,7 +146,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#07083a', // Dark blue background for the header
-    paddingVertical: 30, // Reduced padding to minimize height
+    paddingVertical: 18, // Reduced padding to minimize height
     zIndex: 1, // Ensure the header is above other content
     flexDirection: 'row', // Ensure buttons and search bar are in a row
   },
@@ -191,67 +216,135 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   contentContainer: {
-    flex: 1,
+    paddingTop: 50,
+   // flex: 1,
     // The height will be adjusted dynamically based on the screen width
+  },
+  searchIcon: {
+    marginLeft: 10,
+  },
+  searchIconText: {
+    color: 'white',
+    fontSize: 24,
   },
   footerButtons: {
     position: 'absolute',
     bottom: 0,
     width: '100%',
     flexDirection: 'row',
-    justifyContent: 'center', // Center the buttons and reduce space between them
-    backgroundColor: '#07083a', // Dark blue background for the footer
+    justifyContent: 'center', // Adjust spacing as needed
+    backgroundColor: '#07083a',
     paddingVertical: 10,
-    zIndex: 1,
+  },
+  modalOverlay: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent background
+  },
+  modalContent: {
+    width: '80%',
+    backgroundColor: 'white',
+    borderRadius: 10,
+    padding: 20,
+    alignItems: 'center',
+  },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  modalInput: {
+    width: '100%',
+    borderColor: '#ddd',
+    borderWidth: 1,
+    borderRadius: 5,
+    padding: 10,
+    marginBottom: 10,
+  },
+  modalButtons: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    paddingHorizontal: 10, // Add padding to make space for buttons
+  },
+  modalConfirmButton: {
+    backgroundColor: '#0A74DA',
+    padding: 10,
+    borderRadius: 5,
+    paddingRight: 20,
+    flex: 1, // Take up space in the row
+    marginRight: 5, // Space between confirm and cancel buttons
+  },
+  modalCancelButton: {
+    backgroundColor: 'red',
+    padding: 10,
+    borderRadius: 5,
+    flex: 1, // Take up space in the row
+    marginLeft: 5, // Space between confirm and cancel buttons
+  },
+  modalButtonText: {
+    color: 'white',
+    fontWeight: 'bold',
   },
 });
 
-// Root layout to include the custom headers
 export default function RootLayout() {
   const { width: windowWidth } = useWindowDimensions();
-  const isSmallScreen = windowWidth < 1081;
+  const [modalVisible, setModalVisible] = useState(false);
+  const [email, setEmail] = useState('');
 
-  useEffect(() => {
-    initializeGA();
-    logPageView();
-  }, []);
+  const handleSubscribePress = () => {
+    setModalVisible(true);
+  };
+
+  const handleConfirmSubscription = async () => {
+    try {
+      await addDoc(collection(db, 'subscriptions'), { email });
+      setModalVisible(false);
+      setEmail('');
+    } catch (error) {
+      console.error("Error adding email to Firestore: ", error);
+    }
+  };
 
   return (
     <View style={styles.container}>
-      <View style={[styles.headerContainer, { paddingVertical: isSmallScreen ? 10 : 30 }]}>
-        <CustomHeader />
-        {!isSmallScreen && <CustomSearchBar />}
+      <View style={styles.headerContainer}>
+        <CustomHeader onSubscribePress={handleSubscribePress} />
+        <CustomSearchBar />
       </View>
-      {isSmallScreen && (
-        <View style={styles.footerButtons}>
-          <TouchableOpacity style={styles.button} onPress={() => router.push('/aboutPage')}>
-            <Text style={styles.buttonText}>About</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={() => router.push('/contactUs')}>
-            <Text style={styles.buttonText}>Contact</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={() => router.push('/twitter')}>
-            <Text style={styles.buttonText}>Twitter</Text>
-          </TouchableOpacity>
+      <Stack />
+      {windowWidth < 1081 && <Footer onSubscribePress={handleSubscribePress} />}
+      <Modal
+        visible={modalVisible}
+        transparent={true}
+        animationType="slide"
+        onRequestClose={() => setModalVisible(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalContent}>
+            <Text style={styles.modalTitle}>Subscribe to SeahawksToday for free!</Text>
+            <TextInput
+              style={styles.modalInput}
+              placeholder="Enter your email"
+              value={email}
+              onChangeText={text => setEmail(text)}
+            />
+            <View style={styles.modalButtons}>
+              <TouchableOpacity style={styles.modalConfirmButton} onPress={handleConfirmSubscription}>
+                <Text style={styles.modalButtonText}>Confirm</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.modalCancelButton} onPress={() => setModalVisible(false)}>
+                <Text style={styles.modalButtonText}>Cancel</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.modalCloseButton} onPress={() => setModalVisible(false)}>
+                <Text style={styles.modalButtonText}>X</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
         </View>
-      )}
-      <View style={[styles.contentContainer, { paddingTop: isSmallScreen ? 40 : 85 }]}>
-        <Stack>
-          <Stack.Screen 
-            name="index" 
-            options={{ 
-              headerShown: false // Hide default header
-            }} 
-          />
-          <Stack.Screen 
-            name="[slug]" 
-            options={{ 
-              headerTitle: () => <CustomPostDetailsHeader />,
-              headerStyle: { backgroundColor: '#07083a' }, // Set the header background color
-            }} 
-          />
-        </Stack>
-      </View>
+      </Modal>
     </View>
   );
 }

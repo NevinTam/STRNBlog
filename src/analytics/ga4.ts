@@ -8,7 +8,7 @@ export const initializeGA = () => {
   ReactGA.initialize(GA_MEASUREMENT_ID);
 };
 
-export const logPageView = () => {
+export const logPageView = (asPath: any) => {
   ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
 };
 

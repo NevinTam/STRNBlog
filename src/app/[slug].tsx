@@ -1,3 +1,4 @@
+// Import necessary components and libraries
 import { View, Text, ScrollView, Image, StyleSheet, useWindowDimensions } from 'react-native';
 import React, { useState, useEffect } from 'react';
 import { Stack, useLocalSearchParams } from 'expo-router';
@@ -19,7 +20,7 @@ const PostDetailsPage = () => {
 
     useEffect(() => {
         const fetchPost = async () => {
-            if (slug) {
+            if (slug && slug !== 'subscription') {
                 const postData = await getPost(slug);
                 setPost(postData);
             }
@@ -54,7 +55,7 @@ const PostDetailsPage = () => {
         },
     });
 
-    // Handle exceptions for /aboutPage and /contactUs
+    // Handle special pages
     if (slug === 'aboutPage') {
         return (
             <ScrollView
@@ -133,6 +134,28 @@ Shrihun and Nevin have longed to do something with the football community. Both 
         );
     }
 
+    if (slug === 'subscription') {
+        return (
+            <ScrollView
+                style={{ flex: 1, backgroundColor: 'white' }}
+                contentContainerStyle={{
+                    maxWidth: 960,
+                    width: '100%',
+                    marginHorizontal: 'auto',
+                    padding: 20,
+                    paddingBottom: isSmallScreen ? 50 : 0,
+                }}
+            >
+                <View style={styles.titleContainer}>
+                    <Text style={styles.title}>Subscribe</Text>
+                </View>
+                <View style={styles.postContainer}>
+                    <Text>Subscribe to Seahawks Today for free!.</Text>
+                </View>
+            </ScrollView>
+        );
+    }
+
     if (!post) {
         return <Text>Post not Found!</Text>;
     }
@@ -175,14 +198,20 @@ Shrihun and Nevin have longed to do something with the football community. Both 
 const styles = StyleSheet.create({
     titleContainer: {
         width: '100%',
+        paddingTop: 10,
+        paddingBottom: 10,
+        paddingLeft: 30,
+        paddingRight: 30,
         backgroundColor: '#f0f0f0',
-        padding: 10,
+        //paddingTop: 10,
         marginBottom: 20,
+        marginTop: 50,
         alignItems: 'center',
         justifyContent: 'center',
     },
     title: {
         fontSize: 30,
+        
         fontWeight: 'bold',
     },
     postContainer: {
