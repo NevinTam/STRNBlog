@@ -4,6 +4,7 @@ import { View, Text, Image, StyleSheet, useWindowDimensions, TouchableOpacity, T
 import { getAllPosts } from '../repository/postRepository'; // Ensure this function is available for fetching posts
 import { db } from '../../firebaseConfig'; // Import your Firebase config
 import { collection, addDoc } from 'firebase/firestore';
+import { initializeGA, logPageView } from '../analytics/ga4';
 
 function CustomHeader({ onSubscribePress }) {
   const { width: windowWidth } = useWindowDimensions();
@@ -76,6 +77,11 @@ function CustomSearchBar() {
       setAllPosts(posts);
     };
     fetchPosts();
+  }, []);
+
+  useEffect(() => {
+    initializeGA();
+    logPageView();
   }, []);
 
   useEffect(() => {
