@@ -132,7 +132,10 @@ export default function RootLayout() {
   const [modalVisible, setModalVisible] = useState(false);
   const [email, setEmail] = useState('');
   const [post, setAllPosts] = useState([]);
-
+  export async function generateStaticParams(): Promise<Record<string, string>[]> {
+    const posts = await getAllPosts();
+    return posts.map(post => ({ slug: post.slug }));
+  }
 
   const handleSubscribePress = () => {
     // Show the modal
