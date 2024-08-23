@@ -9,7 +9,7 @@ import { initializeGA, logPageView } from '../analytics/ga4';
 import Head from 'expo-router/head';
 
 const fallbackMeta = {
-  title: 'SeahawksToday5',
+  title: 'SeahawksToday6',
   description: 'SeahawksToday - Your source for the latest Seahawks news.',
   thumbnail: 'https://substackcdn.com/image/fetch/w_176,h_176,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F60c80449-366b-47dc-a711-17219ba57e61_463x427.png'
 };
@@ -148,8 +148,13 @@ export default function RootLayout() {
   useEffect(() => {
     const fetchPost = async () => {
       const posts = await getAllPosts();
-      const post = posts.find(p => p.slug === slug);
-      setCurrentPost(post || null);
+      if (slug) {
+        // Ensure slug is defined and use it to find the specific post
+        const post = posts.find(p => p.slug === slug || (slug.startsWith(p.slug) && slug.length > p.slug.length));
+        setCurrentPost(post || null);
+      } else {
+        setCurrentPost(null);
+      }
     };
     fetchPost();
   }, [slug]);
@@ -194,12 +199,12 @@ export default function RootLayout() {
 
   return (
     <View style={styles.container}>
-    <Head>
+      <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
-        <meta property="og:image" content={meta.thumbnail} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@TodaySeahawks" />
+        <meta name="og:title" content={meta.title} />
+        <meta name="og:description" content={meta.description} />
+        <meta name="og:image" content={meta.thumbnail} />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.thumbnail} />
