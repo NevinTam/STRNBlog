@@ -8,6 +8,12 @@ import { router, Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { initializeGA, logPageView } from '../analytics/ga4';
 import Head from 'expo-router/head';
 
+const fallbackMeta = {
+  title: 'SeahawksToday5',
+  description: 'SeahawksToday - Your source for the latest Seahawks news.',
+  thumbnail: 'https://substackcdn.com/image/fetch/w_176,h_176,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F60c80449-366b-47dc-a711-17219ba57e61_463x427.png'
+};
+
 // CustomHeader Component
 function CustomHeader({ onSubscribePress }) {
   const { width: windowWidth } = useWindowDimensions();
@@ -143,7 +149,7 @@ export default function RootLayout() {
     const fetchPost = async () => {
       const posts = await getAllPosts();
       const post = posts.find(p => p.slug === slug);
-      setCurrentPost(post);
+      setCurrentPost(post || null);
     };
     fetchPost();
   }, [slug]);
@@ -177,17 +183,26 @@ export default function RootLayout() {
     checkModalVisibility();
   }, []);
 
+  const isHomePage = !slug || slug === '/' || slug === 'https://www.seahawks-today.com/' || slug === 'https://seahawks-today.com/';
+  const isSpecialPage = slug === 'aboutPage' || slug === 'contactUs' || slug === 'twitter';
+
+  const meta = currentPost && !isHomePage && !isSpecialPage ? {
+    title: currentPost.title,
+    description: currentPost.description,
+    thumbnail: currentPost.thumbnail
+  } : fallbackMeta;
+
   return (
     <View style={styles.container}>
-   <Head>
-        <title>{currentPost?.title || 'Default Title'}</title>
-        <meta name="description" content={currentPost?.description || 'Default Description'} />
-        <meta property="og:image" content={currentPost?.thumbnail || 'default-image-url'} />
+    <Head>
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
+        <meta property="og:image" content={meta.thumbnail} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@TodaySeahawks" />
-        <meta name="twitter:title" content={currentPost?.title || 'Default Title'} />
-        <meta name="twitter:description" content={currentPost?.description || 'Default Description'} />
-        <meta name="twitter:image" content={currentPost?.thumbnail || 'default-image-url'} />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content={meta.thumbnail} />
       </Head>
       <View style={styles.headerContainer}>
         <CustomHeader onSubscribePress={handleSubscribePress} />
