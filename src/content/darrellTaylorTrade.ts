@@ -7,7 +7,6 @@ const post: Post = {
     description: 'Seattle trades their 4th EDGE on the roster to the Bears for a draft pick next year.',
     thumbnail: 'https://cdn.vox-cdn.com/thumbor/NWfd_um1W-4-ZPqsG5I2oRDF3SY=/0x0:4683x3122/1200x800/filters:focal(1988x55:2736x803)/cdn.vox-cdn.com/uploads/chorus_image/image/73207433/1928947213.5.jpg',
     content: `
-# Instant Analysis: Darrell Taylor Traded to the Bears for a 2025 6th round pick
 ‎ 
 
     SeahawksToday Lead Writers: Shrihun Sankepally and Nevin Tamilselvan
