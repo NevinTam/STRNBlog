@@ -10,6 +10,7 @@ const posts: Record<string, Post> = {
     JerrellPreTrainingCampInterview: require('./JerrellPreTrainingCampInterview').default,
     RolandTankTrembleUnderdog: require('./RolandTankTrembleUnderdog').default,
     rosterOffensivePredictions: require('./rosterOffensivePredictions').default,
+    darrellTaylorTrade: require('./darrellTaylorTrade').default,
 };  
 
 export default posts;
