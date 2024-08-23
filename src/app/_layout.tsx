@@ -179,15 +179,15 @@ export default function RootLayout() {
 
   return (
     <View style={styles.container}>
-      <Head>
-        <title>{currentPost ? currentPost.title : 'SeahawksToday'}</title>
-        <meta name="description" content={currentPost ? currentPost.description : 'SeahawksToday - Your source for the latest Seahawks news'} />
-        <meta property="og:image" content={currentPost ? currentPost.thumbnail : 'https://substackcdn.com/image/fetch/w_176,h_176,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F60c80449-366b-47dc-a711-17219ba57e61_463x427.png'} />
+   <Head>
+        <title>{currentPost?.title || 'Default Title'}</title>
+        <meta name="description" content={currentPost?.description || 'Default Description'} />
+        <meta property="og:image" content={currentPost?.thumbnail || 'default-image-url'} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@TodaySeahawks" />
-        <meta name="twitter:title" content={currentPost ? currentPost.title : 'SeahawksToday'} />
-        <meta name="twitter:description" content={currentPost ? currentPost.description : 'SeahawksToday - Your source for the latest Seahawks news'} />
-        <meta name="twitter:image" content={currentPost ? currentPost.thumbnail : 'https://substackcdn.com/image/fetch/w_176,h_176,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F60c80449-366b-47dc-a711-17219ba57e61_463x427.png'} />
+        <meta name="twitter:title" content={currentPost?.title || 'Default Title'} />
+        <meta name="twitter:description" content={currentPost?.description || 'Default Description'} />
+        <meta name="twitter:image" content={currentPost?.thumbnail || 'default-image-url'} />
       </Head>
       <View style={styles.headerContainer}>
         <CustomHeader onSubscribePress={handleSubscribePress} />
