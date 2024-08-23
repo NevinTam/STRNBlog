@@ -4,8 +4,9 @@ import { getAllPosts } from '../repository/postRepository'; // Ensure this funct
 import { db } from '../../firebaseConfig'; // Import your Firebase config
 import { collection, addDoc } from 'firebase/firestore';
 import AsyncStorage from '@react-native-async-storage/async-storage'; // Import AsyncStorage
-import { router, Stack, useRouter } from 'expo-router';
+import { router, Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { initializeGA, logPageView } from '../analytics/ga4';
+import Head from 'expo-router/head';
 
 // CustomHeader Component
 function CustomHeader({ onSubscribePress }) {
@@ -130,11 +131,22 @@ export default function RootLayout() {
   const { width: windowWidth } = useWindowDimensions();
   const [modalVisible, setModalVisible] = useState(false);
   const [email, setEmail] = useState('');
+  const { slug } = useLocalSearchParams(); // Get the slug from route params
+  const [currentPost, setCurrentPost] = useState(null);
 
   const handleSubscribePress = () => {
     // Show the modal
     setModalVisible(true);
   };
+
+  useEffect(() => {
+    const fetchPost = async () => {
+      const posts = await getAllPosts();
+      const post = posts.find(p => p.slug === slug);
+      setCurrentPost(post);
+    };
+    fetchPost();
+  }, [slug]);
 
   const handleConfirmSubscription = async () => {
     try {
@@ -167,6 +179,16 @@ export default function RootLayout() {
 
   return (
     <View style={styles.container}>
+      <Head>
+        <title>{currentPost ? currentPost.title : 'SeahawksToday'}</title>
+        <meta name="description" content={currentPost ? currentPost.description : 'SeahawksToday - Your source for the latest Seahawks news'} />
+        <meta property="og:image" content={currentPost ? currentPost.thumbnail : 'https://substackcdn.com/image/fetch/w_176,h_176,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F60c80449-366b-47dc-a711-17219ba57e61_463x427.png'} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@TodaySeahawks" />
+        <meta name="twitter:title" content={currentPost ? currentPost.title : 'SeahawksToday'} />
+        <meta name="twitter:description" content={currentPost ? currentPost.description : 'SeahawksToday - Your source for the latest Seahawks news'} />
+        <meta name="twitter:image" content={currentPost ? currentPost.thumbnail : 'https://substackcdn.com/image/fetch/w_176,h_176,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F60c80449-366b-47dc-a711-17219ba57e61_463x427.png'} />
+      </Head>
       <View style={styles.headerContainer}>
         <CustomHeader onSubscribePress={handleSubscribePress} />
         <CustomSearchBar />
