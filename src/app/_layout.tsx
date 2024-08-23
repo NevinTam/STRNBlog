@@ -6,7 +6,6 @@ import { collection, addDoc } from 'firebase/firestore';
 import AsyncStorage from '@react-native-async-storage/async-storage'; // Import AsyncStorage
 import { router, Stack, useRouter } from 'expo-router';
 import { initializeGA, logPageView } from '../analytics/ga4';
-import Head from 'expo-router/head';
 
 // CustomHeader Component
 function CustomHeader({ onSubscribePress }) {
@@ -131,11 +130,6 @@ export default function RootLayout() {
   const { width: windowWidth } = useWindowDimensions();
   const [modalVisible, setModalVisible] = useState(false);
   const [email, setEmail] = useState('');
-  const [post, setAllPosts] = useState([]);
-  export async function generateStaticParams(): Promise<Record<string, string>[]> {
-    const posts = await getAllPosts();
-    return posts.map(post => ({ slug: post.slug }));
-  }
 
   const handleSubscribePress = () => {
     // Show the modal
@@ -153,13 +147,6 @@ export default function RootLayout() {
     }
   };
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const posts = await getAllPosts();
-      setAllPosts(posts);
-    };
-    fetchPosts();
-  }, []);
   const handleCancelSubscription = async () => {
     setModalVisible(false);
     setEmail('');
@@ -179,16 +166,6 @@ export default function RootLayout() {
   }, []);
 
   return (
-    <>
-    <Head>
-      {/* Meta tags for Twitter Card preview */}
-      <meta name="twitter:card" content={"summary_large_image"} />
-      <meta name="twitter:site" content="@TodaySeahawks" />
-      <meta name="twitter:title" content={post.title} />
-      <meta name="twitter:description" content={post.description} />
-      <meta name="twitter:image" content= {post.thumbnail} />
-      <title>Seahawks Today</title>
-    </Head>
     <View style={styles.container}>
       <View style={styles.headerContainer}>
         <CustomHeader onSubscribePress={handleSubscribePress} />
@@ -226,7 +203,6 @@ export default function RootLayout() {
         </View>
       </Modal>
     </View>
-    </>
   );
 }
 const styles = StyleSheet.create({
