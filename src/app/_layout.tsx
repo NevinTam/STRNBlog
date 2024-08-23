@@ -5,6 +5,7 @@ import { db } from '../../firebaseConfig'; // Import your Firebase config
 import { collection, addDoc } from 'firebase/firestore';
 import AsyncStorage from '@react-native-async-storage/async-storage'; // Import AsyncStorage
 import { router, Stack, useRouter } from 'expo-router';
+import { initializeGA, logPageView } from '../analytics/ga4';
 
 // CustomHeader Component
 function CustomHeader({ onSubscribePress }) {
@@ -81,7 +82,10 @@ function CustomSearchBar() {
     };
     fetchPosts();
   }, []);
-
+  useEffect(() => {
+    initializeGA();
+    logPageView();
+  }, []);
   useEffect(() => {
     const results = allPosts.filter(post => post.title.toLowerCase().includes(searchText.toLowerCase()));
     setFilteredPosts(results);
