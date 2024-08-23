@@ -131,6 +131,8 @@ export default function RootLayout() {
   const { width: windowWidth } = useWindowDimensions();
   const [modalVisible, setModalVisible] = useState(false);
   const [email, setEmail] = useState('');
+  const [post, setAllPosts] = useState([]);
+
 
   const handleSubscribePress = () => {
     // Show the modal
@@ -148,6 +150,13 @@ export default function RootLayout() {
     }
   };
 
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const posts = await getAllPosts();
+      setAllPosts(posts);
+    };
+    fetchPosts();
+  }, []);
   const handleCancelSubscription = async () => {
     setModalVisible(false);
     setEmail('');
@@ -172,9 +181,9 @@ export default function RootLayout() {
       {/* Meta tags for Twitter Card preview */}
       <meta name="twitter:card" content={"summary_large_image"} />
       <meta name="twitter:site" content="@TodaySeahawks" />
-      <meta name="twitter:title" content="Seahawks Today" />
-      <meta name="twitter:description" content="Stay updated with the latest news and updates about the Seattle Seahawks." />
-      <meta name="twitter:image" content="https://substackcdn.com/image/fetch/w_176,h_176,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F60c80449-366b-47dc-a711-17219ba57e61_463x427.png" />
+      <meta name="twitter:title" content={post.title} />
+      <meta name="twitter:description" content={post.description} />
+      <meta name="twitter:image" content= {post.thumbnail} />
       <title>Seahawks Today</title>
     </Head>
     <View style={styles.container}>
