@@ -168,7 +168,7 @@ Shrihun and Nevin have longed to do something with the football community. Both 
                 <meta property="og:image" content="https://pbs.twimg.com/profile_images/1577822032490041344/9sm_ZYGp_400x400.jpg" />
                 {/* Twitter Card Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@todayseahawks" />
+                <meta name="twitter:site" content="@TodaySeahawks" />
                 <meta name="twitter:title" content={post.title} />
                 <meta name="twitter:description" content={post.description} />
                 <meta name="twitter:image" content={post.thumbnail} />
