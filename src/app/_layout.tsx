@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { router, Stack, useRouter } from 'expo-router';
 import { View, Text, Image, StyleSheet, useWindowDimensions, TouchableOpacity, TextInput, FlatList, TouchableWithoutFeedback, Modal } from 'react-native';
 import { getAllPosts } from '../repository/postRepository'; // Ensure this function is available for fetching posts
 import { db } from '../../firebaseConfig'; // Import your Firebase config
 import { collection, addDoc } from 'firebase/firestore';
-import { initializeGA, logPageView } from '../analytics/ga4';
+import AsyncStorage from '@react-native-async-storage/async-storage'; // Import AsyncStorage
+import { router, Stack, useRouter } from 'expo-router';
 
+// CustomHeader Component
 function CustomHeader({ onSubscribePress }) {
   const { width: windowWidth } = useWindowDimensions();
-  const router = useRouter();
   const headerFontSize = windowWidth < 1081 ? 24 : 32;
   const imageSize = windowWidth < 1081 ? 60 : 80;
 
@@ -43,6 +43,8 @@ function CustomHeader({ onSubscribePress }) {
     </View>
   );
 }
+
+// Footer Component
 function Footer({ onSubscribePress }) {
   const router = useRouter();
   return (
@@ -63,6 +65,7 @@ function Footer({ onSubscribePress }) {
   );
 }
 
+// CustomSearchBar Component
 function CustomSearchBar() {
   const { width: windowWidth } = useWindowDimensions();
   const [searchText, setSearchText] = useState('');
@@ -77,11 +80,6 @@ function CustomSearchBar() {
       setAllPosts(posts);
     };
     fetchPosts();
-  }, []);
-
-  useEffect(() => {
-    initializeGA();
-    logPageView();
   }, []);
 
   useEffect(() => {
@@ -123,20 +121,83 @@ function CustomSearchBar() {
   );
 }
 
-function CustomPostDetailsHeader() {
+// RootLayout Component
+export default function RootLayout() {
   const { width: windowWidth } = useWindowDimensions();
-  if (windowWidth < 1081) return null; // Hide if screen width is less than 1081px
+  const [modalVisible, setModalVisible] = useState(false);
+  const [email, setEmail] = useState('');
 
-  const headerFontSize = 24; // Font size for Post Details
-  const imageSize = 0; // Image size
+  const handleSubscribePress = () => {
+    // Show the modal
+    setModalVisible(true);
+  };
+
+  const handleConfirmSubscription = async () => {
+    try {
+      // Add the email to Firestore
+      await addDoc(collection(db, 'subscriptions'), { email });
+      setModalVisible(false);
+      setEmail('');
+    } catch (error) {
+      console.error("Error adding email to Firestore: ", error);
+    }
+  };
+
+  const handleCancelSubscription = async () => {
+    setModalVisible(false);
+    setEmail('');
+  };
+
+  useEffect(() => {
+    const checkModalVisibility = async () => {
+      try {
+        // Clear the modal flag to show the modal on each app visit
+        await AsyncStorage.removeItem('hasShownModal');
+        setModalVisible(true);
+      } catch (error) {
+        console.error("Error checking modal visibility: ", error);
+      }
+    };
+    checkModalVisibility();
+  }, []);
 
   return (
-    <View style={styles.detailsHeaderContent}>
-      <Image
-        source={{ uri: 'https://substackcdn.com/image/fetch/w_176,h_176,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F60c80449-366b-47dc-a711-17219ba57e61_463x427.png' }}
-        style={[styles.detailsHeaderImage, { width: imageSize, height: imageSize }]} // Image size
-      />
-      <Text style={[styles.detailsHeaderTitle, { fontSize: headerFontSize }]}></Text>
+    <View style={styles.container}>
+      <View style={styles.headerContainer}>
+        <CustomHeader onSubscribePress={handleSubscribePress} />
+        <CustomSearchBar />
+      </View>
+      <Stack />
+      {windowWidth < 1081 && <Footer onSubscribePress={handleSubscribePress} />}
+      <Modal
+        visible={modalVisible}
+        transparent={true}
+        animationType="slide"
+        onRequestClose={() => setModalVisible(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalContent}>
+            <Text style={styles.modalTitle}>Subscribe to SeahawksToday for free!</Text>
+            <TextInput
+              style={styles.modalInput}
+              placeholder="Enter your email"
+              value={email}
+              onChangeText={text => setEmail(text)}
+            />
+            <View style={styles.modalButtons}>
+              <TouchableOpacity style={styles.modalConfirmButton} onPress={handleConfirmSubscription}>
+                <Text style={styles.modalButtonText}>Confirm</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.modalCancelButton} onPress={handleCancelSubscription}>
+                <Text style={styles.modalButtonText}>Cancel</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.modalCloseButton} onPress={() => setModalVisible(false)}>
+                <Text style={styles.modalButtonText}>X</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 }
@@ -248,17 +309,29 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent background
   },
+  modalContainer: {
+    height: '100%',
+    //flex: 1,  // Fill the screen
+    justifyContent: 'center',  // Center vertically
+    alignItems: 'center',      // Center horizontally
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Overlay background
+  },
   modalContent: {
-    width: '80%',
+    width: '80%',  // Adjust width as a percentage of the screen width
+    maxWidth: 400, // Optional: Max width to prevent it from being too large
+    padding: 20,
     backgroundColor: 'white',
     borderRadius: 10,
-    padding: 20,
     alignItems: 'center',
+    // Removed absolute positioning and transform
   },
   modalTitle: {
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 10,
+    textAlign: 'center',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis', // Truncate text if it overflows
   },
   modalInput: {
     width: '100%',
@@ -270,7 +343,7 @@ const styles = StyleSheet.create({
   },
   modalButtons: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     width: '100%',
     paddingHorizontal: 10, // Add padding to make space for buttons
   },
@@ -279,12 +352,14 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
     paddingRight: 20,
+    alignItems: 'center',
     flex: 1, // Take up space in the row
-    marginRight: 5, // Space between confirm and cancel buttons
+    marginRight: 10, // Space between confirm and cancel buttons
   },
   modalCancelButton: {
     backgroundColor: 'red',
     padding: 10,
+    alignItems: 'center',
     borderRadius: 5,
     flex: 1, // Take up space in the row
     marginLeft: 5, // Space between confirm and cancel buttons
@@ -294,63 +369,3 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
-
-export default function RootLayout() {
-  const { width: windowWidth } = useWindowDimensions();
-  const [modalVisible, setModalVisible] = useState(false);
-  const [email, setEmail] = useState('');
-
-  const handleSubscribePress = () => {
-    setModalVisible(true);
-  };
-
-  const handleConfirmSubscription = async () => {
-    try {
-      await addDoc(collection(db, 'subscriptions'), { email });
-      setModalVisible(false);
-      setEmail('');
-    } catch (error) {
-      console.error("Error adding email to Firestore: ", error);
-    }
-  };
-
-  return (
-    <View style={styles.container}>
-      <View style={styles.headerContainer}>
-        <CustomHeader onSubscribePress={handleSubscribePress} />
-        <CustomSearchBar />
-      </View>
-      <Stack />
-      {windowWidth < 1081 && <Footer onSubscribePress={handleSubscribePress} />}
-      <Modal
-        visible={modalVisible}
-        transparent={true}
-        animationType="slide"
-        onRequestClose={() => setModalVisible(false)}
-      >
-        <View style={styles.modalOverlay}>
-          <View style={styles.modalContent}>
-            <Text style={styles.modalTitle}>Subscribe to SeahawksToday for free!</Text>
-            <TextInput
-              style={styles.modalInput}
-              placeholder="Enter your email"
-              value={email}
-              onChangeText={text => setEmail(text)}
-            />
-            <View style={styles.modalButtons}>
-              <TouchableOpacity style={styles.modalConfirmButton} onPress={handleConfirmSubscription}>
-                <Text style={styles.modalButtonText}>Confirm</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.modalCancelButton} onPress={() => setModalVisible(false)}>
-                <Text style={styles.modalButtonText}>Cancel</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.modalCloseButton} onPress={() => setModalVisible(false)}>
-                <Text style={styles.modalButtonText}>X</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-        </View>
-      </Modal>
-    </View>
-  );
-}

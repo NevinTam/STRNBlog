@@ -203,7 +203,6 @@ const styles = StyleSheet.create({
         paddingLeft: 30,
         paddingRight: 30,
         backgroundColor: '#f0f0f0',
-        //paddingTop: 10,
         marginBottom: 20,
         marginTop: 50,
         alignItems: 'center',
@@ -211,7 +210,6 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 30,
-        
         fontWeight: 'bold',
     },
     postContainer: {
