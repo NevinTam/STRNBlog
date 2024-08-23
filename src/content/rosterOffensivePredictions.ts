@@ -21,20 +21,20 @@ const post: Post = {
 #### Safe: K9, Charb, McIntosh, Holani
 ‎ 
 ## **WR: 6**
-***DK Metcalf*** has looked the best he ever has during this 2024 training camp, and 1300+ yards on an offense like this with a plethora of weapons could be easily obtainable. ***Tyler Lockett*** has still looked like Tyler Lockett throughout training camp, and even though he may regress to the 3rd receiving option on the team, expecting ~800 yards from him seems likely. ***Jaxon Smith-Njigba*** will most likely be the one to replace Lockett as WR2 based on his stellar training camp. ***Jake Bobo*** as a fan favorite also has the most reliable hands on the team according to many, and could be an elite redzone option based on the plays he has made during training camp. ***Laviska Shenault Jr.*** hasn't had too much buzz around his name but in a deep WR room, having a two-time former 600 yard receiver as the 5th option swhould be something Seattle looks to do. ***D'Wayne Eskridge*** is having a good camp and probably remains on the roster due to the draft capital investment, his ability to be a returner on special teams, and perhaps untapped potential. ***Dareke Young*** was initially on this list, but having a 4th RB in Holani on the roster may make more sense than having a 7th wide receiver. ***Hayden Hatten*** has also received some buzz, but in an extremely deep recevier room, there may not be any room for the rookie UDFA. ***Easop Winston Jr.*** has had some nice days but an extremely deep room may prevent him from remaining on the roster. 
-#### Safe: Metcalf, Lockett, Smith-Njigba, Bobo, Shenault, Eskridge
+***DK Metcalf*** has looked the best he ever has during this 2024 training camp, and 1300+ yards on an offense like this with a plethora of weapons could be easily obtainable. ***Tyler Lockett*** has still looked like Tyler Lockett throughout training camp, and even though he may regress to the 3rd receiving option on the team, expecting ~800 yards from him seems likely. ***Jaxon Smith-Njigba*** will most likely be the one to replace Lockett as WR2 based on his stellar training camp. ***Jake Bobo*** as a fan favorite also has the most reliable hands on the team according to many, and could be an elite redzone option based on the plays he has made during training camp. ***Laviska Shenault Jr.*** hasn't had too much buzz around his name but in a deep WR room, having a two-time former 600 yard receiver as the 5th option swhould be something Seattle looks to do. ***Dareke Young*** is having a good camp and looks to have beaten out ***D'Wayne Eskridge*** for the last wide receiver spot on the roster. remains on the roster due to the draft capital investment, his ability to be a returner on special teams, and perhaps untapped potential. ***Hayden Hatten*** has also received some buzz, but in an extremely deep recevier room, there may not be any room for the rookie UDFA. ***Easop Winston Jr.*** has had some nice days but an extremely deep room may prevent him from remaining on the roster. 
+#### Safe: Metcalf, Lockett, Smith-Njigba, Bobo, Shenault, Young
 ‎ 
 ![](https://s.yimg.com/ny/api/res/1.2/GjOyCkxXA0c1q9_wbg1U6A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQ1MA--/https://media.zenfs.com/en/seattle_seahawks_wire_usa_today_sports_articles_798/8be966bca39263c02a8e58c9f6bdce4d)
-## **TE: 3**
-Coming from the ***Russell Wilson*** trade, ***Noah Fant*** has yet to live up to first round expectations in Seattle. After recording a career low in receptions, yards, and touchdowns (0), Fant is primed for a breakout year after resigning with the Seahawks. While they do have a lot of versatility with their receivers, Fant has gone under the radar as a Seahawks pass catcher and should get close to the ~550 mark this season. ***Pharoah Brown*** signed with the Seahawks this offseason, known for his stellar blocking skills. While his roster spot isn't guaranteed, he seems like he'll make the team and the team's 2nd TE. Rookie ***AJ Barner*** hasn't received too much attention this offseason, but should provide a nice complement to Seattle's veteran tight ends.
-#### Safe: Fant, Brown, Barner
+## **TE: 4**
+Coming from the ***Russell Wilson*** trade, ***Noah Fant*** has yet to live up to first round expectations in Seattle. After recording a career low in receptions, yards, and touchdowns (0), Fant is primed for a breakout year after resigning with the Seahawks. While they do have a lot of versatility with their receivers, Fant has gone under the radar as a Seahawks pass catcher and should get close to the ~550 mark this season. ***Pharoah Brown*** signed with the Seahawks this offseason, known for his stellar blocking skills. While his roster spot isn't guaranteed, he seems like he'll make the team and the team's 2nd TE. Rookie ***AJ Barner*** hasn't received too much attention this offseason, but should provide a nice complement to Seattle's veteran tight ends. ***Brady Russell*** makes the team as the tight end 4 with the numerous injuries ahead of him on the depth chart and Barner not yet breaking out.
+#### Safe: Fant, Brown, Barner, Russell
 ‎ 
 ***
 ![](https://cdn.vox-cdn.com/thumbor/hYfKMVlRui86HzzcBaZegIU_UGY=/0x0:5237x3491/1200x800/filters:focal(2208x677:3044x1513)/cdn.vox-cdn.com/uploads/chorus_image/image/71558738/1427852083.0.jpg)
 # Offensive Line
 
 ## **OT: 2**
-## **OG: 2**
+## **OG: 1**
 ## **OC: 2**
 ## **OG: 2**
 ## **OT: 2**
@@ -42,15 +42,15 @@ The Seahawks offensive line does not currently have clear-cut starters. Left tac
 
 Center ***Olu Oluwatimi*** was hoped to take over the starting center job this offseason, but the Seahawks have now signed ***Connor Williams***, allowing Olu and ***Nick Harris*** to compete for the backup job. Olu has been the starter throughout most of the offseason, so Harris may not have a place on the roster. Connor Williams, if at his pre-injury condition, enters as the Seahawks best offensive linemen in a long time and the Seahawks best center in a very, very long time.
 
-Perhaps the most unclear spot, right guard has 2nd year player ***Anthony Bradford*** with the starting job right now, rookie ***Christian Haynes*** who has not been able to cement himself as the starter yet, and ***McClendon Curtis*** who has impressed the Seahawks and played at right guard earlier in the offseaosn, but with the uncertainty of ***Abraham Lucas***, switched to right tackle. 
+Perhaps the most unclear spot, right guard has 2nd year player ***Anthony Bradford*** with the starting job right now, rookie ***Christian Haynes*** who has not been able to cement himself as the starter yet, and ***McClendon Curtis*** who has impressed the Seahawks and played at right guard earlier in the offseason, but with the uncertainty of ***Abraham Lucas***, switched to right tackle. 
 
-Right tackle being the deepest spot for the Seahawks, Abe Lucas and ***George Fant*** are the clear options there. With ***Mike Jerrell*** impressing during camp, he seems like a lock to make the roster with his ability to play tackle and guard. Curtis makes the roster over ***Sataoa Laumea*** who has received very little attention this camp, while Curtis has played well and can be played at both guard and tackle.
+Right tackle being the deepest spot for the Seahawks, Abe Lucas and ***George Fant*** are the clear options there. With ***Mike Jerrell*** impressing during camp, he seems like a lock to make the roster with his ability to play tackle and guard. Curtis does not make the roster here as Seattle goes one lighter at guard with Williams able to play both positions. ***Sataoa Laumea*** who has received very little attention this camp does not either.
 
  ‎ 
 > # CLICK -> [Mike Jerrell Training Camp Interview](https://seahawks-today.com/JerrellPreTrainingCampInterview)
 
  ‎ 
-#### Safe: Cross, Tomlinson, Olu, Bradford, Lucas, Jerrell, Curtis, Harris, Haynes, Fant
+#### Safe: Cross, Tomlinson, Williams, Bradford, Lucas, Jerrell, Haynes, Olu, Fant
 ‎ 
 # 2024 Offensive Roster Prediction:
 
@@ -58,10 +58,10 @@ Right tackle being the deepest spot for the Seahawks, Abe Lucas and ***George Fa
 |----------|----------------------------------|
 | QB       | Geno Smith, Sam Howell          |
 | RB       | Kenneth Walker III, Zach Charbonnet, Kenny McIntosh, George Holani |
-| WR       | DK Metcalf, Tyler Lockett, Jaxon Smith-Njigba, Jake Bobo, Laviska Shenault, Dee Eskridge |
-| TE       | Noah Fant, Pharaoh Brown, AJ Barner |
+| WR       | DK Metcalf, Tyler Lockett, Jaxon Smith-Njigba, Jake Bobo, Laviska Shenault, Dareke Young |
+| TE       | Noah Fant, Pharaoh Brown, AJ Barner, Brady Russell |
 | OT       | Charles Cross, Mike Jerrell    |
-| OG       | Laken Tomlinson, McClendon Curtis       |
+| OG       | Laken Tomlinson       |
 | OC       | Connor Williams, Olu Oluwatimi       |
 | OG       | Anthony Bradford, Christian Haynes     |
 | OT       | Abraham Lucas, George Fant    |
