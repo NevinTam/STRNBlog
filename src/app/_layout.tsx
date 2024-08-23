@@ -170,8 +170,8 @@ export default function RootLayout() {
     <>
     <Head>
       {/* Meta tags for Twitter Card preview */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@YourTwitterHandle" />
+      <meta name="twitter:card" content={"summary_large_image"} />
+      <meta name="twitter:site" content="@TodaySeahawks" />
       <meta name="twitter:title" content="Seahawks Today" />
       <meta name="twitter:description" content="Stay updated with the latest news and updates about the Seattle Seahawks." />
       <meta name="twitter:image" content="https://substackcdn.com/image/fetch/w_176,h_176,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F60c80449-366b-47dc-a711-17219ba57e61_463x427.png" />
