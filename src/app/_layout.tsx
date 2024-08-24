@@ -9,7 +9,7 @@ import { initializeGA, logPageView } from '../analytics/ga4';
 import Head from 'expo-router/head';
 
 const fallbackMeta = {
-  title: 'SeahawksToday9',
+  title: 'Seahawks Today',
   description: 'SeahawksToday - Your source for the latest Seahawks news.',
   thumbnail: 'https://substackcdn.com/image/fetch/w_176,h_176,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F60c80449-366b-47dc-a711-17219ba57e61_463x427.png'
 };
@@ -144,21 +144,16 @@ export default function RootLayout() {
     // Show the modal
     setModalVisible(true);
   };
-
   useEffect(() => {
     const fetchPost = async () => {
       const posts = await getAllPosts();
-      const currentPath = router.asPath || ''; // Default to empty string if asPath is undefined
-      const slug = currentPath.split('/').pop(); // Extract the slug from the URL
-      if (slug && slug !== '') {
-        const post = posts.find(p => p.slug === slug);
+      if (slug && typeof slug === 'string') {
+        const post = posts.find(p => p.slug === slug || (slug.startsWith(p.slug) && slug.length > p.slug.length));
         setCurrentPost(post || null);
-      } else {
-        setCurrentPost(null);
       }
     };
     fetchPost();
-  }, [router.asPath]);
+  }, [slug]);
 
   const handleConfirmSubscription = async () => {
     try {
@@ -189,11 +184,6 @@ export default function RootLayout() {
     checkModalVisibility();
   }, []);
 
-
-  useEffect(() => {
-    console.log('Current URL:', window.location.href);
-  }, []);
-
   const isHomePage = !slug || slug === '/' || slug === 'https://www.seahawks-today.com/' || slug === 'https://seahawks-today.com/';
   const isSpecialPage = slug === 'aboutPage' || slug === 'contactUs' || slug === 'twitter';
 
@@ -204,19 +194,16 @@ export default function RootLayout() {
         thumbnail: currentPost.thumbnail,
       }
     : fallbackMeta;
-    console.log(window.location.href)
+
   return (
     <View style={styles.container}>
- <Head>
+   <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
-        <meta property="og:image" content={meta.thumbnail} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:image" content={meta.thumbnail} />
-        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={meta.title} />
-        <meta name="twitter:creator" content='@TodaySeahawks' />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.thumbnail} />
       </Head>
