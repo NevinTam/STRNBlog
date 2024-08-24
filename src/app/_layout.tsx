@@ -148,13 +148,17 @@ export default function RootLayout() {
   useEffect(() => {
     const fetchPost = async () => {
       const posts = await getAllPosts();
-      if (slug && typeof slug === 'string') {
-        const post = posts.find(p => p.slug === slug || (slug.startsWith(p.slug) && slug.length > p.slug.length));
+      const currentPath = router.asPath || ''; // Default to empty string if asPath is undefined
+      const slug = currentPath.split('/').pop(); // Extract the slug from the URL
+      if (slug && slug !== '') {
+        const post = posts.find(p => p.slug === slug);
         setCurrentPost(post || null);
+      } else {
+        setCurrentPost(null);
       }
     };
     fetchPost();
-  }, [slug]);
+  }, [router.asPath]);
 
   const handleConfirmSubscription = async () => {
     try {
@@ -185,6 +189,11 @@ export default function RootLayout() {
     checkModalVisibility();
   }, []);
 
+
+  useEffect(() => {
+    console.log('Current URL:', window.location.href);
+  }, []);
+
   const isHomePage = !slug || slug === '/' || slug === 'https://www.seahawks-today.com/' || slug === 'https://seahawks-today.com/';
   const isSpecialPage = slug === 'aboutPage' || slug === 'contactUs' || slug === 'twitter';
 
@@ -195,16 +204,19 @@ export default function RootLayout() {
         thumbnail: currentPost.thumbnail,
       }
     : fallbackMeta;
-    
+    console.log(window.location.href)
   return (
     <View style={styles.container}>
-   <Head>
+ <Head>
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
+        <meta property="og:image" content={meta.thumbnail} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:image" content={meta.thumbnail} />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:creator" content='@TodaySeahawks' />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.thumbnail} />
       </Head>
