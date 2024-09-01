@@ -9,7 +9,9 @@ const posts: Record<string, Post> = {
     oldArticlePlaceholders: require('./oldArticlePlaceholders').default,
     JerrellPreTrainingCampInterview: require('./JerrellPreTrainingCampInterview').default,
     RolandTankTrembleUnderdog: require('./RolandTankTrembleUnderdog').default,
+    darrellTaylorTrade: require('./darrellTaylorTrade').default,
     rosterOffensivePredictions: require('./rosterOffensivePredictions').default,
+    rosterDefensivePrediction: require('./rosterDefensivePrediction').default,
     superBowlPredictions: require('./superBowlPredictions').default,
 	theSeahawksImpendingFreeAgents: require('./theSeahawksImpendingFreeAgents').default,
 	freeAgencyMarketOverviewPosition: require('./freeAgencyMarketOverviewPosition').default,
@@ -137,6 +139,6 @@ const posts: Record<string, Post> = {
 	NflDraftScoutingChristian: require('./NflDraftScoutingChristian').default,
 	takeawaysFromSeahawksWildCard: require('./takeawaysFromSeahawksWildCard').default,
 	//[REPLACE]
-};  
+};
 
 export default posts;

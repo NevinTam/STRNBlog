@@ -10,7 +10,7 @@ const post: Post = {
 
     SeahawksToday Lead Writers: Shrihun Sankepally and Nevin Tamilselvan
 ‎ 
-# **“Come in with the idea that ’I am gonna be better today’, and that’ll lead you all the way to the finish line”**
+# **“Come in with the idea that ’I am gonna be better today’, and that’ll lead you all the way to the finish line”.**
 ‎ 
 
 ## **Michael Jerrell, star Findlay OT**...

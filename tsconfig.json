@@ -2,11 +2,16 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
+    "module": "commonjs",
+    "target": "es6",
+    "baseUrl": ".", // Set the base URL for module resolution
     "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
+      "@/*": ["./*"] // Ensure paths are correctly mapped
+    },
+    "moduleResolution": "node", // Use node module resolution
+    "esModuleInterop": true, // Ensure compatibility with CommonJS modules
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true // Ensure consistent file name casing
   },
   "include": [
     "**/*.ts",
