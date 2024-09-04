@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'takeawaysFromSeahawksLossToRaiders', //file name
-    date: '2022-12-052T12:38:08.632872300',
+    date: '2022-12-05T12:38:08.632872300',
     title: 'Takeaways From Seahawks Loss To Raiders',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://www.columbian.com/wp-content/uploads/2022/11/Raiders_Seahawks_Football_77035.jpg-e4635.jpg',

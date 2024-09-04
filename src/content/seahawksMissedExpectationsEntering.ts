@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'seahawksMissedExpectationsEntering', //file name
-    date: '2022-09-251T12:38:08.522492100',
+    date: '2022-09-25T12:38:08.522492100',
     title: 'Seahawks Missed Expectations Entering Week 3',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/seahawks/kmgqdmdmw0dm9vc7jpa2',
