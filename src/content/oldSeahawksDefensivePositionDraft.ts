@@ -3,7 +3,7 @@ import { Post } from '../types/post';
 const post: Post = {
     slug: 'oldSeahawksDefensivePositionDraft', //file name
     date: '2022-08-30T12:38:08.454865600',
-    title: 'Old Seahawks Defensive Needs Pre-Draft',
+    title: 'Seahawks Defensive Needs Pre-Draft',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://cdn.theathletic.com/cdn-cgi/image/width=1920,format=auto/https://cdn.theathletic.com/app/uploads/2021/12/15075613/GettyImages-1349089182-scaled-e1639573000657-1024x700.jpg',
     content: `

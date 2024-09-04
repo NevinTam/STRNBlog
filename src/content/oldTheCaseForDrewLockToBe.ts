@@ -3,7 +3,7 @@ import { Post } from '../types/post';
 const post: Post = {
     slug: 'oldTheCaseForDrewLockToBe', //file name
     date: '2022-09-03T12:38:08.472543300',
-    title: 'Old The Case For Drew Lock To Be Seahawks QB',
+    title: 'The Case For Drew Lock To Be Seahawks QB',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://sportshub.cbsistatic.com/i/r/2019/12/01/aef8146d-0a6a-4f4f-9525-1cc5d408fd7b/thumbnail/1200x675/750c68838bc0b6580072d37e7cc1b14f/usatsi-13737380-drew-lock-broncos-qb-debut-pregame-2019-1400.jpg',
     content: `

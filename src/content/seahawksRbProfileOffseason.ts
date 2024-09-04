@@ -3,7 +3,7 @@ import { Post } from '../types/post';
 const post: Post = {
     slug: 'seahawksRbProfileOffseason', //file name
     date: '2023-06-23T12:38:08.261030200',
-    title: 'Seahawks RB Profile',
+    title: 'Seahawks RB Profile - 2023 Offseason',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/e4746643-dbf7-4324-ad33-ddb6612157ff_1200x1200.jpeg',
     content: `

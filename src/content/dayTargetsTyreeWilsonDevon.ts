@@ -3,7 +3,7 @@ import { Post } from '../types/post';
 const post: Post = {
     slug: 'dayTargetsTyreeWilsonDevon', //file name
     date: '2023-04-27T12:38:08.237653100',
-    title: 'Day Targets Tyree Wilson Devon',
+    title: 'Day One Targets: Tyree Wilson and Devon Witherspoon',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/5048503c-006f-4907-97e1-37439fbcc102_1920x1080.jpeg',
     content: `

@@ -3,7 +3,7 @@ import { Post } from '../types/post';
 const post: Post = {
     slug: 'oldSeattleSeahawksDraftRecap', //file name
     date: '2022-09-03T12:38:08.467018600',
-    title: 'Old Seattle Seahawks Draft Recap',
+    title: 'Seattle Seahawks Draft Recap',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://www.si.com/.image/t_share/MTc3Njk3NzE1NjA0NDMyNDkz/20201003_fb_vs_arkansas_cross_ap_09672.jpg',
     content: `

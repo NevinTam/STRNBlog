@@ -3,7 +3,7 @@ import { Post } from '../types/post';
 const post: Post = {
     slug: 'oldReturnOfTheBigGunsTheTop', //file name
     date: '2022-09-03T12:38:08.482616700',
-    title: 'Old Return Of The Big Guns: The Top 5 QBs in the 2023 NFL Draft',
+    title: 'Return Of The Big Guns: The Top 5 QBs in the 2023 NFL Draft',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://www.si.com/.image/t_share/MTg2NDAyMTM3MzgxNTQ1NjY3/cj-stroud.jpg',
     content: `

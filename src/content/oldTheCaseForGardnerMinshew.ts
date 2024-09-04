@@ -3,7 +3,7 @@ import { Post } from '../types/post';
 const post: Post = {
     slug: 'oldTheCaseForGardnerMinshew', //file name
     date: '2022-09-03T12:38:08.482616700',
-    title: 'Old The Case For Gardner Minshew to be Seahawks QB',
+    title: 'The Case For Gardner Minshew to be Seahawks QB',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://www.sportsnet.ca/wp-content/uploads/2019/12/Gardner-Minshew-Jacksonville-Jaguars-1.jpg',
     content: `

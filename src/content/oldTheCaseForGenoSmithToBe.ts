@@ -3,7 +3,7 @@ import { Post } from '../types/post';
 const post: Post = {
     slug: 'oldTheCaseForGenoSmithToBe', //file name
     date: '2022-09-03T12:38:08.467018600',
-    title: 'Old The Case For Geno Smith To Be Seahawks QB',
+    title: 'The Case For Geno Smith To Be Seahawks QB',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://thespun.com/.image/t_share/MTkzNjUzOTIwNjg4NTE0NDk5/seattle-seahawks-v-arizona-cardinals.jpg',
     content: `

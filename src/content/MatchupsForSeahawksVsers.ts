@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'MatchupsForSeahawksVsers', //file name
-    date: '2023-11-23T12:38:08.701614300',
+    date: '2022-12-16T12:38:08.701614300',
     title: 'Matchups For Seahawks Vs 49ers on TNF',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://images.saymedia-content.com/.image/MTY3MTMzMzg1MzUxNzY3NDA0/usatsi_13398611.jpg',

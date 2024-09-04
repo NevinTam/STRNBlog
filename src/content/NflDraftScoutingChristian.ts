@@ -3,7 +3,7 @@ import { Post } from '../types/post';
 const post: Post = {
     slug: 'NflDraftScoutingChristian', //file name
     date: '2023-01-16T12:38:08.787717400',
-    title: 'Nfl Draft Scouting Report: Christian Gonzalez',
+    title: 'NFL Draft Scouting Report: Christian Gonzalez',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/9ec6bd23-cdd1-42be-9c51-ccb1ff82e0cd_1400x933.webp',
     content: `

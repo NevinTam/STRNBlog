@@ -3,7 +3,7 @@ import { Post } from '../types/post';
 const post: Post = {
     slug: 'oldSeahawksOffseasonPickups', //file name
     date: '2022-08-26T12:38:08.444821500',
-    title: 'Old Seahawks Offseason Pickups',
+    title: 'Seahawks Offseason Pickups',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://cdn.theathletic.com/app/uploads/2022/08/09202906/USATSI_17345351-1-1024x683.jpg',
     content: `
