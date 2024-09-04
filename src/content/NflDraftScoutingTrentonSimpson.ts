@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'NflDraftScoutingTrentonSimpson', //file name
-    date: '2022-10-22T12:38:08.717258300',
+    date: '2022-12-18T12:38:08.717258300',
     title: ' Nfl Draft Scouting Report: Trenton Simpson',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://on3static.com/uploads/dev/assets/cms/2022/06/10182343/Trenton-Simpson.jpg',

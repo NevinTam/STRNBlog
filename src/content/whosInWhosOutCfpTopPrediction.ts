@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'whosInWhosOutCfpTopPrediction', //file name
-    date: '2023-09-07T12:38:08.612668300',
+    date: '2022-11-12T12:38:08.612668300',
     title: 'Whos In Whos Out: Cfp Top Prediction',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://volswire.usatoday.com/wp-content/uploads/sites/19/2024/08/IMG_4474.jpeg?w=1000&h=600&crop=1',

@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'flightRadarPotentialSeahawksOn', //file name
-    date: '2022-12-05T12:38:08.532529200',
+    date: '2022-09-30T12:38:08.532529200',
     title: 'Flight Radar: Potential Seahawks On Days 1 and 2',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://cdn.vox-cdn.com/thumbor/zff9W55kaqzVad06t3rK_BgSf6A=/0x0:2432x3648/1820x1213/filters:focal(1172x1144:1560x1532)/cdn.vox-cdn.com/uploads/chorus_image/image/71558977/1243929203.0.jpg',

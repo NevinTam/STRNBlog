@@ -2,8 +2,8 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'topDefensiveLinemenMaziSmith', //file name
-    date: '2023-11-10T12:38:08.227471400',
-    title: 'Top Defensive Linemen: Mazi Smith',
+    date: '2023-04-27T12:38:08.227471400',
+    title: 'Top Defensive Linemen: Mazi Smith and Ade Ade\'s Scouting Report',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/96eb66f2-6c8d-4936-83f7-4cf4ce59f431_1280x853.jpeg',
     content: `

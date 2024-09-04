@@ -2,8 +2,8 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'MatchupsForSeahawksVsBuccaneers', //file name
-    date: '2022-10-03T12:38:08.617683700',
-    title: ' Matchups For Seahawks Vs Buccaneers',
+    date: '2022-11-12T12:38:08.617683700',
+    title: 'Matchups For Seahawks Vs Buccaneers',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://news.cgtn.com/news/2022-01-09/Tampa-Bay-Buccaneers-extend-Vita-Vea-s-deal-by-4-years-73-million-16GH6OpBafe/img/b430ab0cece94b92a01a4bb51fa17635/b430ab0cece94b92a01a4bb51fa17635.jpeg',
     content: `

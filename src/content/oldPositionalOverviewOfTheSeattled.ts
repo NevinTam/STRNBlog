@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'oldPositionalOverviewOfTheSeattled', //file name
-    date: '2021-07-02T12:38:08.492284900',
+    date: '2022-09-03T12:38:08.492284900',
     title: 'Old Positional Overview Of The Seattle WRs',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://sports.mynorthwest.com/wp-content/uploads/2022/10/GettyImages-1427469073.jpg',

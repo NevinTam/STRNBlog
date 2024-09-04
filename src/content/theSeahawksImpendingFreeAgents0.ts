@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'theSeahawksImpendingFreeAgents0', //file name
-    date: '2023-05-10T12:38:08.797276600',
+    date: '2023-02-25T12:38:08.797276600',
     title: 'The Seahawks Impending Free Agents: Offense',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/c644fb96-f88e-4227-bc45-11ebaa5a12d9_780x520.jpeg',

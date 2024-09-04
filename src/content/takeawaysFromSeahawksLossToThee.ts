@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'takeawaysFromSeahawksLossToThee', //file name
-    date: '2022-07-06T12:38:08.722398900',
+    date: '2022-12-22T12:38:08.722398900',
     title: 'Takeaways From Seahawks Loss To The 49ers',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://media.nbcsportsbayarea.com/2023/12/brock-purdy-GettyImages-1848263105.jpg?quality=85&strip=all&resize=1200%2C675',

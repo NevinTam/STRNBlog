@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'takeawaysFromSeahawksWinAgainstF', //file name
-    date: '2022-02-16T12:38:08.312357',
+    date: '2023-10-15T12:38:08.312357',
     title: 'Takeaways From Seahawks Win Against Giants on MNF',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/1ee838fd-64bd-467a-8340-f34c34926d4e_474x284.jpeg',

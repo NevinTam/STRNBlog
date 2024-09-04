@@ -2,8 +2,8 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'whoFellOffADeepLookIntoPreseason', //file name
-    date: '2022-10-01T12:38:08.572734600',
-    title: 'Who Fell Off: A Deep Look Into Preseason',
+    date: '2022-10-31T12:38:08.572734600',
+    title: 'Who Fell Off: A Deep Look Into Preseason Risers',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://th.bing.com/th/id/OIP.vNyDO5NJJzbU3lgFZrxowQAAAA?rs=1&pid=ImgDetMain',
     content: `

@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'opinionTheSeahawksFutureIsHere', //file name
-    date: '2023-10-04T12:38:08.742472900',
+    date: '2023-01-01T12:38:08.742472900',
     title: 'Opinion: The Seahawks Future Is Here',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://cdn.vox-cdn.com/thumbor/wro81Odt7HGXsOA7JxGF24DY2Ek=/0x0:3184x2123/1200x800/filters:focal(1333x0:1841x508)/cdn.vox-cdn.com/uploads/chorus_image/image/71844091/1455098129.0.jpg',

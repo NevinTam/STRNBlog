@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'takeawaysFromSeahawksLossToPanthers', //file name
-    date: '2022-03-21T12:38:08.692580400',
+    date: '2022-12-14T12:38:08.692580400',
     title: 'Takeaways From Seahawks Loss To Panthers',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://pantherswire.usatoday.com/wp-content/uploads/sites/62/2022/12/USATSI_19607867.jpg?w=1000',

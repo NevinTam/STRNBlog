@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'headlinesForSeahawksVsRamsGame', //file name
-    date: '2023-07-24T12:38:08.352341900',
+    date: '2023-11-19T12:38:08.352341900',
     title: 'Headlines For Seahawks Vs Rams',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/96b7a7d4-c674-49ce-ab91-9b3838766cb2_1000x600.jpeg',

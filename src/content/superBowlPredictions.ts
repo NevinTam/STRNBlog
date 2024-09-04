@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'superBowlPredictions', //file name
-    date: '2023-01-05T12:38:07.888501300',
+    date: '2023-02-12T12:38:07.888501300',
     title: 'Super Bowl Predictions',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/13c40062-9919-4212-b5bd-26efc422d052_1200x675.jpeg',

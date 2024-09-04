@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'oldSeahawksOffensiveDraftTargets', //file name
-    date: '2021-03-08T12:38:08.452350200',
+    date: '2022-08-28T12:38:08.452350200',
     title: 'Old Seahawks Offensive Draft Targets',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://www.heraldnet.com/wp-content/uploads/2023/03/32063149_web1_L1-Seahawks-Geno-EDH-230308.jpg',

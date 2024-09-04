@@ -2,8 +2,8 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'MatchupsForSeahawksVsJets', //file name
-    date: '2022-01-01T12:38:08.737466200',
-    title: ' Matchups For Seahawks Vs Jets',
+    date: '2023-01-01T12:38:08.737466200',
+    title: 'Matchups For Seahawks Vs Jets',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://jetsxfactor.com/wp-content/uploads/2022/09/Sauce-Gardner-NY-Jets-PFF-Stats-Film.jpg',
     content: `

@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'analysisHowSeattlesTightsEnds', //file name
-    date: '2022-06-21T21:57:33.229941500',
+    date: '2022-11-12T21:57:33.229941500',
     title: 'Analysis: How Seattles Tights Ends Elevate Seahawks Offense',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://images.foxtv.com/static.q13fox.com/www.q13fox.com/content/uploads/2022/03/1280/720/GettyImages-1357533355.jpg',

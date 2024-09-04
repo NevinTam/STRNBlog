@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'howMichaelBigGucciJerrellUsed', //file name
-    date: '2023-01-15T12:38:08.402663300',
+    date: '2024-05-04T12:38:08.402663300',
     title: 'How Michael \"Big Gucci\" Jerrell used loyalty to make his way to the NFL',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/cd919562-d1d2-459e-9ae2-517a3c8b56c4_1023x575.jpeg',

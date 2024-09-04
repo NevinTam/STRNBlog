@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'analysisImprovingSeahawksSpecial', //file name
-    date: '2022-03-16T21:57:33.249954100',
+    date: '2022-11-27T21:57:33.249954100',
     title: 'Analysis: Improving Seahawks Special Teams',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://sports.mynorthwest.com/wp-content/uploads/2023/11/jason-myers-seattle-seahawks-GW-FG-WC-getty-900.jpg',

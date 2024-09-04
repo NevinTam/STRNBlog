@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'howMikeJackIsEmbracingTheNew', //file name
-    date: '2023-09-16T12:38:08.272532200',
+    date: '2023-07-20T12:38:08.272532200',
     title: 'How \"Mike Jack\" Is Embracing New Role with Seahawks',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/7ec50180-f9c5-4c9e-80c9-7d43d4521af3_600x338.jpeg',

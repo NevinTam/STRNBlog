@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'seahawksMidseasonGrades', //file name
-    date: '2023-09-20T12:38:08.582292',
+    date: '2023-11-05T12:38:08.582292',
     title: 'Seahawks Midseason Grades',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://nypost.com/wp-content/uploads/sites/2/2022/04/Geno-Smith-Seahawks.jpg',

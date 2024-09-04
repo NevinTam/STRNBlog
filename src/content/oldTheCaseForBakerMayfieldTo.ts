@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'oldTheCaseForBakerMayfieldTo', //file name
-    date: '2021-05-02T12:38:08.477109300',
+    date: '2022-09-03T12:38:08.477109300',
     title: 'Old The Case For Baker Mayfield To Be A Seahawk',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://www.gannett-cdn.com/presto/2018/08/10/USAT/ee180b48-3e93-4d74-ba79-fc5dd2019db2-USATSI_11055518.jpg?crop=3306,1860,x27,y286&width=3200&height=1680&fit=bounds',

@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'darrellTaylorsEmergenceAndWhy', //file name
-    date: '2022-02-16T21:57:33.303470',
+    date: '2023-01-05T21:57:33.303470',
     title: 'Darrell Taylor\'s Emergence And Why',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/52bd5303-6d87-439f-8303-232d92468cf4_3000x2000.jpeg',

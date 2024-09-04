@@ -2,8 +2,8 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'MatchupsForSeahawksVsSaints', //file name
-    date: '2022-10-26T12:38:08.542576300',
-    title: ' Matchups For Seahawks Vs Saints',
+    date: '2022-10-09T12:38:08.542576300',
+    title: 'Matchups For Seahawks Vs Saints',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://wallpapercave.com/wp/wp4933313.jpg',
     content: `

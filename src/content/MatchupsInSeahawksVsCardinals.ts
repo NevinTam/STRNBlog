@@ -2,8 +2,8 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'MatchupsInSeahawksVsCardinals', //file name
-    date: '2022-11-06T12:38:08.552440400',
-    title: ' Matchups For Seahawks Vs Cardinals',
+    date: '2022-10-16T12:38:08.552440400',
+    title: 'Matchups For Seahawks Vs Cardinals',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://www.washingtonpost.com/resizer/L1HU3EajxZwuYjcjVx28CPfa2HM=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/OTWMXDHIO4I6TIZJON4PX6Q3MM.jpg',
     content: `

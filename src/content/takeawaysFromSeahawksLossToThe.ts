@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'takeawaysFromSeahawksLossToThe', //file name
-    date: '2022-06-02T12:38:08.542576300',
+    date: '2022-10-12T12:38:08.542576300',
     title: 'Takeaways From Seahawks Loss To The Saints',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://cdn.vox-cdn.com/thumbor/ZR2D_9En6pel0prTfJXhwZZu5Ds=/0x0:3591x2394/1200x800/filters:focal(1596x42:2170x616)/cdn.vox-cdn.com/uploads/chorus_image/image/71474204/1431995982.0.jpg',

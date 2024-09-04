@@ -2,8 +2,8 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'MatchupsForSeahawksVsChiefs', //file name
-    date: '2023-09-26T12:38:08.727405700',
-    title: ' Matchups For Seahawks Vs Chiefs',
+    date: '2023-12-24T12:38:08.727405700',
+    title: 'Matchups For Seahawks Vs Chiefs',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://static0.givemesportimages.com/wordpress/wp-content/uploads/2024/09/patrick-mahomes-kansas-city-chiefs-qb.jpg',
     content: `

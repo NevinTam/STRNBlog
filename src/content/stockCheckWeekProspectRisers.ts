@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'stockCheckWeekProspectRisers', //file name
-    date: '2022-04-13T12:38:08.522492100',
+    date: '2022-09-24T12:38:08.522492100',
     title: 'Stock Check Week: Prospect Risers',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://sports.mynorthwest.com/wp-content/uploads/2023/08/michael-penix-uw-huskies-ASU-AP-900.jpg',

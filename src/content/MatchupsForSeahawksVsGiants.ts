@@ -2,8 +2,8 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'MatchupsForSeahawksVsGiants', //file name
-    date: '2022-11-05T12:38:08.572734600',
-    title: ' Matchups For Seahawks Vs Giants',
+    date: '2022-10-30T12:38:08.572734600',
+    title: 'Matchups For Seahawks Vs Giants',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://i1.wp.com/empiresportsmedia.com/wp-content/uploads/2019/06/USATSI_11553284.jpg?fit=1170%2C780&ssl=1',
     content: `

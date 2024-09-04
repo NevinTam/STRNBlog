@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'NflDraftScoutingDaiyanHenley', //file name
-    date: '2023-08-19T12:38:08.132524400',
+    date: '2023-03-08T12:38:08.132524400',
     title: ' Nfl Draft Scouting Report: Daiyan Henley',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/30d98326-9bd3-49e4-b5e8-f8582af65149_1200x628.jpeg',

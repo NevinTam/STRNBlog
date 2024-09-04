@@ -2,8 +2,8 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'seattlesTargetsCoverCornerbacks', //file name
-    date: '2022-04-28T12:38:08.205201100',
-    title: 'Seattles Targets: Cover Cornerbacks',
+    date: '2023-04-24T12:38:08.205201100',
+    title: 'Seattles Targets: Cover-3 Cornerbacks',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/afa196d5-f923-4545-a13b-85005aa9139a_1805x1014.jpeg',
     content: `

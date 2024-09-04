@@ -2,8 +2,8 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'MatchupsForTheSeahawksPlayoff', //file name
-    date: '2022-01-05T12:38:08.782677400',
-    title: ' Matchups For The Seahawks Playoff Game Vs 49ers',
+    date: '2023-01-14T12:38:08.782677400',
+    title: 'Matchups For The Seahawks Playoff Game Vs 49ers',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/5305463a-9722-46fa-b22d-81a3572b29a1_3200x2134.jpeg',
     content: `

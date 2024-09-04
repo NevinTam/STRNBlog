@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'whyJalenCarterIsASeahawkEverything', //file name
-    date: '2022-09-06T12:38:08.177501300',
+    date: '2023-04-11T12:38:08.177501300',
     title: 'Why Jalen Carter Is A Seahawk',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/287cbdcd-b22f-4385-b52a-5bdc1533a6fd_1024x683.jpeg',

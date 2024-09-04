@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'analysisSeahawksEmergingDefensive', //file name
-    date: '2023-06-02T21:57:33.196103100',
+    date: '2022-10-30T21:57:33.196103100',
     title: 'Analysis: Seahawks Emerging Defensive Line',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://ontapsportsnet.com/.image/ar_1.91%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_xy_center%2Cq_auto:good%2Cw_1200%2Cx_2030%2Cy_582/MjA4Nzc1NTY2MTEzOTA4MDE5/darrell-taylor-kyler-murray-arizona-cardinals-vs-seattle-seahawks.jpg',

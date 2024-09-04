@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'takeawaysFromSeahawksWinOver', //file name
-    date: '2022-12-14T12:38:08.502531700',
+    date: '2022-09-15T12:38:08.502531700',
     title: 'Takeaways From Seahawks Win Over Broncos on MNF',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://cmg-cmg-tv-10090-prod.cdn.arcpublishing.com/resizer/eg09zemL_h9kSNf6L-NgIiokSjU=/1440x810/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/cmg/EHK2Y4QYVJDDJCCQIBDNC474LI.jpg',

@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'everythingSeahawksDemetrisHarris', //file name
-    date: '2022-10-15T12:38:08.242669200',
+    date: '2023-05-12T12:38:08.242669200',
     title: 'Everything Seahawks: Demetris Harris',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/ec1efcf2-fd6a-45bf-9e04-b507b949af0e_1600x1066.jpeg',

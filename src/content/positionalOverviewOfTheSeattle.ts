@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'positionalOverviewOfTheSeattle', //file name
-    date: '2022-07-23T12:38:08.498410100',
+    date: '2022-09-03T12:38:08.498410100',
     title: 'Positional Overview Of The Seattle OL',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://ekcfbmsotzc.exactdn.com/en/blog/wp-content/uploads/2022/09/nfl-seahawks-charles-cross-betmgm.jpg?strip=all&lossy=1&ssl=1',

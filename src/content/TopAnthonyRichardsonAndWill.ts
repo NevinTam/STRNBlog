@@ -2,8 +2,8 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'TopAnthonyRichardsonAndWill', //file name
-    date: '2023-01-26T12:38:08.222386900',
-    title: ' Top 2023 Players: Anthony Richardson And Will Anderson',
+    date: '2023-04-26T12:38:08.222386900',
+    title: '2-Top 5: Anthony Richardson And Will Anderson',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/a5e07d3a-fffe-4498-bf70-2faa893da0b6_3260x2173.jpeg',
     content: `

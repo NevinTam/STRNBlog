@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'analysisSeahawksImprovingLbs', //file name
-    date: '2023-09-25T21:57:33.270118900',
+    date: '2022-12-11T21:57:33.270118900',
     title: 'Analysis: Seahawks Improving Lbs',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://www.si.com/.image/t_share/MTg0ODM4MjU2MDM3MjA5NTc1/usatsi_17028405.jpg',

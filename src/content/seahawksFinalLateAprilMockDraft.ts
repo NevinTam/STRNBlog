@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'seahawksFinalLateAprilMockDraft', //file name
-    date: '2023-07-21T12:38:08.217355100',
+    date: '2023-04-27T12:38:08.217355100',
     title: 'Seahawks Final Late April Mock Draft',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/465e97f2-150f-4611-a467-1de7fc6b5f71_1100x733.jpeg',

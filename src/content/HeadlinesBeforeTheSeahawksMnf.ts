@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'HeadlinesBeforeTheSeahawksMnf', //file name
-    date: '2022-10-11T12:38:08.502531700',
+    date: '2022-09-12T12:38:08.502531700',
     title: ' Headlines Before The Seahawks MNF Game Against Broncos',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://library.sportingnews.com/styles/crop_style_16_9_mobile_2x/s3/2022-05/Russell-Wilson-051122-GETTY-FTR.jpg?itok=jWZQxhXI',

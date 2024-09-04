@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'takeawaysFromSeahawksLossToBuccaneers', //file name
-    date: '2022-04-23T12:38:08.623237400',
+    date: '2022-11-24T12:38:08.623237400',
     title: 'Takeaways From Seahawks Loss To Buccaneers',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://www.betus.com.pa/wp-content/uploads/2022/11/nfl-week-10-lock-bet-of-the-week-seahawks-vs-buccaneers-11-13-2022.jpg',

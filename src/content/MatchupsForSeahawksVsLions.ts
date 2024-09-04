@@ -2,8 +2,8 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'MatchupsForSeahawksVsLions', //file name
-    date: '2022-11-01T12:38:08.540072200',
-    title: ' Matchups For Seahawks Vs Lions',
+    date: '2022-10-02T12:38:08.540072200',
+    title: 'Matchups For Seahawks Vs Lions',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://www.si.com/.image/t_share/MTkyMjYzNzgwNDM0OTc4MDI4/aidan5.jpg',
     content: `

@@ -2,8 +2,8 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'MatchupsToWatchDuringers', //file name
-    date: '2022-05-28T12:38:08.509656500',
-    title: ' Matchups To Watch During Seahawks vs 49ers',
+    date: '2022-09-18T12:38:08.509656500',
+    title: 'Matchups To Watch During Seahawks vs 49ers',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://media.bleacherreport.com/image/upload/c_fill,g_faces,w_3800,h_2000,q_95/v1664883810/hivmlhnta2r1tgacx6bz.jpg',
     content: `

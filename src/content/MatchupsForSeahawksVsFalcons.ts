@@ -2,8 +2,8 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'MatchupsForSeahawksVsFalcons', //file name
-    date: '2023-06-21T12:38:08.519987400',
-    title: ' Matchups For Seahawks Vs Falcons',
+    date: '2022-09-25T12:38:08.519987400',
+    title: 'Matchups For Seahawks Vs Falcons',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://thefalconswire.usatoday.com/wp-content/uploads/sites/56/2022/01/USATSI_17442995-e1724996888451.jpg?w=1000&h=600&crop=1',
     content: `

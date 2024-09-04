@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'everythingSeahawksDavidHowesJerrick', //file name
-    date: '2023-02-17T12:38:08.242669200',
+    date: '2023-06-09T12:38:08.242669200',
     title: 'Everything Seahawk\'s: David Howes, Jerrick Reed\'s Coach',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/68792f17-63db-4cf1-8a59-7adceb18625a_1200x825.png',

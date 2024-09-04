@@ -2,8 +2,8 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'freeAgencyMarketOverviewPositionAe', //file name
-    date: '2022-07-28T12:38:08.142621600',
-    title: 'Free Agency Market Overview: LB Position',
+    date: '2023-03-13T12:38:08.142621600',
+    title: 'Free Agency Market Overview: 3-4 ILB',
     description: 'This is an old article ported from substack. The new website is this one!',
     thumbnail: 'https://substack-post-media.s3.amazonaws.com/public/images/ad2654db-fe94-40b2-91ea-4fc3c899f855_1200x800.jpeg',
     content: `
