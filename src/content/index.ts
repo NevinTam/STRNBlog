@@ -124,7 +124,6 @@ const posts: Record<string, Post> = {
 	seahawksPostFreeAgencyMockDraft: require('./seahawksPostFreeAgencyMockDraft').default,
 	howMichaelBigGucciJerrellUsed: require('./howMichaelBigGucciJerrellUsed').default,
 	seahawksRookiePrimerHowDoThey: require('./seahawksRookiePrimerHowDoThey').default,
-	oldArticlePlaceholders: require('./oldArticlePlaceholders').default,
 	JerrellPreTrainingCampInterview: require('./JerrellPreTrainingCampInterview').default,
 	RolandTankTrembleUnderdog: require('./RolandTankTrembleUnderdog').default,
 	rosterOffensivePredictions: require('./rosterOffensivePredictions').default,
