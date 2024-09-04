@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'offseasonPickups2022', //file name
-    date: '2022-08-26T13:27:28Z',
+    date: '2022-04-15T13:27:28Z',
     title: 'Seahawks 2022 Offseason Pickups',
     description: 'The Seattle Seahawks went and got numerous “bargain bin” free agents this offseason while giving the most APY (Average Per Year) salary to any outsider free agent during General Manager John Schnieder’s tenure. They also acquired several players in a blockbuster trade with the Denver Broncos. We will go over each player’s production and whether their contract was worth the price they are paid.',
     thumbnail: 'https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fea3163c3-65f4-4abe-a0e8-c0dd8100b4c9_700x700.jpeg',
