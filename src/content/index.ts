@@ -129,6 +129,7 @@ const posts: Record<string, Post> = {
 	rosterOffensivePredictions: require('./rosterOffensivePredictions').default,
 	darrellTaylorTrade: require('./darrellTaylorTrade').default,
 	rosterDefensivePrediction: require('./rosterDefensivePrediction').default,
+	Headlines2024Week1: require('./Headlines2024Week1').default,
 };
 
 export default posts;
