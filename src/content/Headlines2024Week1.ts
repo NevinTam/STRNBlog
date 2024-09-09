@@ -2,7 +2,7 @@ import { Post } from '../types/post';
 
 const post: Post = {
     slug: 'Headlines2024Week1', //file name
-    date: '2024-9-07T12:38:08.352341900',
+    date: '2024-09-07T12:38:08.352341900',
     title: 'Headlines For The Seahawks vs Broncos Home Opener',
     description: 'Seahawks face Broncos week 1 at Home on Sunday, September 8th.',
     thumbnail: 'https://images.seattletimes.com/wp-content/uploads/2024/05/05042024_Seahawks_173217.jpg?d=2040x1360',
