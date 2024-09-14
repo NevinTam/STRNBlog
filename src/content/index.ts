@@ -131,6 +131,7 @@ const posts: Record<string, Post> = {
 	rosterDefensivePrediction: require('./rosterDefensivePrediction').default,
 	Headlines2024Week1: require('./Headlines2024Week1').default,
 	takeawaysFromSeahawksWinVsBroncos: require('./takeawaysFromSeahawksWinVsBroncos').default,
+	Headlines2024Week2: require('./Headlines2024Week2').default,
 };
 
 export default posts;
