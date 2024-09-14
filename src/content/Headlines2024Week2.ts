@@ -3,7 +3,7 @@ import { Post } from '../types/post';
 const post: Post = {
     slug: 'Headlines2024Week2', //file name
     date: '2024-09-14T12:38:08.352341900',
-    title: 'Headlines For The Seahawks vs Patriots Week 2',
+    title: 'Headlines For The Seahawks vs Patriots Week 2 Matchup',
     description: 'Seahawks face Patriots in the 10 a.m. PST slot on September 15th.',
     thumbnail: 'https://www.koin.com/wp-content/uploads/sites/10/2024/09/GettyImages-2170871333.jpg?w=1280',
     content: `
