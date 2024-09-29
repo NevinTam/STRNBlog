@@ -134,6 +134,8 @@ const posts: Record<string, Post> = {
 	Headlines2024Week2: require('./Headlines2024Week2').default,
 	takeawaysFromSeahawksWinVsPatriots: require('./takeawaysFromSeahawksWinVsPatriots').default,
 	Headlines2024Week3: require('./Headlines2024Week3').default,
+	Headlines2024Week4: require('./Headlines2024Week4').default,
+
 };
 
 export default posts;
