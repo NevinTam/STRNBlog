@@ -5,7 +5,7 @@ const post: Post = {
     date: '10-06-2024',
     title: 'Headlines for the Seahawks vs Giants Week 5 Matchup',
     description: 'The Seahawks face the Giants on a short week after playing on Monday Night Football.',
-    thumbnail: 'https://sports.mynorthwest.com/wp-content/uploads/2024/09/Seattle-Seahawks-DK-Metcalf-catch-Detroit-Lions-2024-Getty-900.jpg',
+    thumbnail: 'https://images.seattletimes.com/wp-content/uploads/2024/10/10062024_Seahawks-Giants_165742.jpg?d=780x520',
     content: `
     Seahawks Today Lead Writers: Shrihun Sankepally and Nevin Tamilselvan
 ‎ 
