@@ -138,6 +138,20 @@ const posts: Record<string, Post> = {
 	Headlines2024Week4: require('./Headlines2024Week4').default,
 	takeawaysFromSeahawksMNFLossLions: require('./takeawaysFromSeahawksMNFLossLions').default,
 	Headlines2024Week5: require('./Headlines2024Week5').default,
+	Takeaways2024Week5: require('./Takeaways2024Week5').default,
+	Headlines2024Week6: require('./Headlines2024Week6').default,
+	Takeaways2024Week6: require('./Takeaways2024Week6').default,
+	Headlines2024Week7: require('./Headlines2024Week7').default,
+	Takeaways2024Week7: require('./Takeaways2024Week7').default,
+	Headlines2024Week8: require('./Headlines2024Week8').default,
+	Takeaways2024Week8: require('./Takeaways2024Week8').default,
+	Headlines2024Week9: require('./Headlines2024Week9').default,
+	Takeaways2024Week9: require('./Takeaways2024Week9').default,
+	Headlines2024Week11: require('./Headlines2024Week11').default,
+	Takeaways2024Week11: require('./Takeaways2024Week11').default,
+	Headlines2024Week12: require('./Headlines2024Week12').default,
+	Takeaways2024Week12: require('./Takeaways2024Week12').default,
+	Headlines2024Week13: require('./Headlines2024Week13').default,
 };
 
 export default posts;
