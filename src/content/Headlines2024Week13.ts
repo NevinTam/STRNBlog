@@ -3,7 +3,7 @@ import { Post } from '../types/post';
 const post: Post = {
     slug: 'Headlines2024Week13', //file name
     date: '11-30-2024',
-    title: 'Headlines for the Seahawks Matchup Against the Jets',
+    title: 'Headlines for the Seahawks Week 13 Matchup Against the Jets',
     description: 'The Seahawks face off against the Jets after posting 2 impressive division wins back-to-back.',
     thumbnail: 'https://images.seattletimes.com/wp-content/uploads/2024/11/11242024_Seahawks-Cardinals_174341.jpg?d=780x754',
     content: `
