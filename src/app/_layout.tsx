@@ -28,7 +28,7 @@ function CustomHeader({ onSubscribePress }) {
           style={[styles.headerImage, { width: imageSize, height: imageSize }]}
         />
       </TouchableOpacity>
-      <Text style={[styles.headerTitle, { fontSize: headerFontSize }]}>SeahawksToday</Text>
+      <Text style={[styles.headerTitle, { fontSize: headerFontSize }]}>SeahawksToday </Text>
       {windowWidth < 1081 ? (
         <TouchableOpacity style={styles.searchIcon} onPress={() => {/* Add functionality if needed */}}>
         </TouchableOpacity>
