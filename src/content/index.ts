@@ -154,6 +154,10 @@ const posts: Record<string, Post> = {
 	Headlines2024Week13: require('./Headlines2024Week13').default,
 	OCRyanGrubbFired: require('./OCRyanGrubbFired').default,
 	OCKlintKubiakHired: require('./OCKlintKubiakHired').default,
+	RayshawnJenkinsCut: require('./RayshawnJenkinsCut').default,
+	RoyRobertsonHarrisCut: require('./RoyRobertsonHarrisCut').default,
+	GeorgeFantCut: require('./GeorgeFantCut').default,
+	DreMontJonesCut: require('./DreMontJonesCut').default,
 };
 
 export default posts;
