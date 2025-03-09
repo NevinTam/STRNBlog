@@ -158,6 +158,9 @@ const posts: Record<string, Post> = {
 	RoyRobertsonHarrisCut: require('./RoyRobertsonHarrisCut').default,
 	GeorgeFantCut: require('./GeorgeFantCut').default,
 	DreMontJonesCut: require('./DreMontJonesCut').default,
+	TylerLockettCut: require('./TylerLockettCut').default,
+	//GenoSmithTraded: require('./GenoSmithTraded').default,
+	//JarranReedExtended: require('./JarranReedExtended').default,
 };
 
 export default posts;
