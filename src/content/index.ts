@@ -159,7 +159,7 @@ const posts: Record<string, Post> = {
 	GeorgeFantCut: require('./GeorgeFantCut').default,
 	DreMontJonesCut: require('./DreMontJonesCut').default,
 	TylerLockettCut: require('./TylerLockettCut').default,
-	//GenoSmithTraded: require('./GenoSmithTraded').default,
+	GenoSmithTraded: require('./GenoSmithTraded').default,
 	//JarranReedExtended: require('./JarranReedExtended').default,
 };
 
