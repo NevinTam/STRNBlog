@@ -161,6 +161,7 @@ const posts: Record<string, Post> = {
 	TylerLockettCut: require('./TylerLockettCut').default,
 	GenoSmithTraded: require('./GenoSmithTraded').default,
 	//JarranReedExtended: require('./JarranReedExtended').default,
+	FreeAgencyTracker: require('./FreeAgencyTracker').default,
 };
 
 export default posts;
