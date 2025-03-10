@@ -162,6 +162,7 @@ const posts: Record<string, Post> = {
 	GenoSmithTraded: require('./GenoSmithTraded').default,
 	//JarranReedExtended: require('./JarranReedExtended').default,
 	FreeAgencyTracker: require('./FreeAgencyTracker').default,
+	DKMetcalfTrade: require('./DKMetcalfTrade').default
 };
 
 export default posts;
