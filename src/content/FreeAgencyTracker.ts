@@ -40,6 +40,7 @@ Read here to learn more about this move: [Geno Smith Traded](https://seahawks-to
 - **Ernest Jones IV Re-signs**
 ‎ 
 - **DK Metcalf Traded** (unofficial move)
+Read here to learn more about this move: [DK Metcalf Traded](https://www.seahawks-today.com/DKMetcalfTrade)
 ‎ 
 `,
 };
