@@ -4,7 +4,7 @@ const post: Post = {
     slug: 'DKMetcalfTrade', //file name
     date: '2025-03-09T12:38:08.352341900',
     title: 'DK Metcalf Traded; What\'s Next?',
-    description: 'The Seahawks have traded their franchise icon to the Pittsburge Steelers. What's next for Schneider & co?',
+    description: 'The Seahawks have traded their franchise icon to the Pittsburgh Steelers. What\'s next for Schneider & co?',
     thumbnail: 'https://ca-times.brightspotcdn.com/dims4/default/7b70de7/2147483647/strip/true/crop/4659x3106+0+0/resize/1200x800!/quality/75/?url=https:%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fb9%2F0c%2Fe23f832f98b0f077135823ee8e5b%2F7f91fe80238c46f19eeabe05eb4145df',
     content: `
     Seahawks Today Lead Writers: Shrihun Sankepally and Nevin Tamilselvan
