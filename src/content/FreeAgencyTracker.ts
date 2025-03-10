@@ -37,11 +37,14 @@ Read here to learn more about this move: [Geno Smith Traded](https://seahawks-to
 ## **March 9th**
 - **Jarran Reed Re-signs**
 ‎ 
-- **Ernest Jones IV Re-signs**
+- **Ernest Jones IV Re-signs** (unofficial move)
 ‎ 
 - **DK Metcalf Traded** (unofficial move)
 Read here to learn more about this move: [DK Metcalf Traded](https://www.seahawks-today.com/DKMetcalfTrade)
-‎ 
+
+## **March 10th**
+- **Sam Darnold Signed** (unofficial move)
+‎
 `,
 };
 //how to add post: https://www.youtube.com/watch?v=ewW6_baBXko
