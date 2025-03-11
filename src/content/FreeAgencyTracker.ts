@@ -45,6 +45,7 @@ Read here to learn more about this move: [DK Metcalf Traded](https://www.seahawk
 ## **March 10th**
 - **Sam Darnold Signed** (unofficial move)
 ‎
+- **Josh Jones Signed** (unofficial move)
 `,
 };
 //how to add post: https://www.youtube.com/watch?v=ewW6_baBXko
