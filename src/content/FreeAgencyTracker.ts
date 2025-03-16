@@ -31,21 +31,35 @@ Read here to learn more about this move: [Tyler Lockett Released](https://seahaw
 - **Josh Jobe Re-signs**
 ‎ 
 ## **March 7th**
-- **Geno Smith Traded** (unofficial move)
+- **Geno Smith Traded**
 Read here to learn more about this move: [Geno Smith Traded](https://seahawks-today.com/GenoSmithTraded)
 ‎ 
 ## **March 9th**
 - **Jarran Reed Re-signs**
 ‎ 
-- **Ernest Jones IV Re-signs** (unofficial move)
+- **Ernest Jones IV Re-signs**
 ‎ 
-- **DK Metcalf Traded** (unofficial move)
+- **DK Metcalf Traded**
 Read here to learn more about this move: [DK Metcalf Traded](https://www.seahawks-today.com/DKMetcalfTrade)
 
 ## **March 10th**
-- **Sam Darnold Signed** (unofficial move)
+- **Sam Darnold Signed**
 ‎
-- **Josh Jones Signed** (unofficial move)
+- **Josh Jones Signed**
+
+## **March 12th**
+- **Marquez Valdes-Scantling Signed**
+‎
+- **DeMarcus Lawrence Signed**
+
+## **March 13th**
+- **John Ross Signed**
+
+## **March 14th**
+- **Cody White Signed**
+‎
+- **Cooper Kupp Signed**
+
 `,
 };
 //how to add post: https://www.youtube.com/watch?v=ewW6_baBXko
